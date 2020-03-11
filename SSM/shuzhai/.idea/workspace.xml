@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="shuzhai:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="21d76be7-cb6f-41c5-bcb3-26809360f698" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="spring-beans.schema" />
+        <option value="mybatis-config" />
+        <option value="Jsp File" />
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="mybatis-mapper" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+    <layout place="tools.popupGulp">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/DevelopmentTools/Maven/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\DevelopmentTools\Maven\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1RKqaAOjJWbfdvh56i1ADcWgfrs" />
+  <component name="PropertiesComponent">
+    <property name="ToolWindowAnt.ShowToolbar" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Management" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.18086697" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.shuzhai.service.Imp" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.shuzhai.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\project\shuzhai\src\main\webapp" />
+      <recent name="D:\project\shuzhai\src\main\resources" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\project\shuzhai\src\main\resources\spring" />
+      <recent name="D:\project\shuzhai\src\main\resources\mybatis" />
+      <recent name="D:\project\shuzhai\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.pratice">
+    <configuration name="pratice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.shuzhai.dao.pratice" />
+      <module name="shuzhai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shuzhai.dao.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceImpTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shuzhai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shuzhai.service.Imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shuzhai.service.Imp" />
+      <option name="MAIN_CLASS_NAME" value="com.shuzhai.service.Imp.BookServiceImpTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceImpTest.getBooksByLatest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shuzhai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shuzhai.service.Imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shuzhai.service.Imp" />
+      <option name="MAIN_CLASS_NAME" value="com.shuzhai.service.Imp.BookServiceImpTest" />
+      <option name="METHOD_NAME" value="getBooksByLatest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OtherTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="shuzhai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.shuzhai.service.Imp.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.shuzhai.service.Imp" />
+      <option name="MAIN_CLASS_NAME" value="com.shuzhai.service.Imp.OtherTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUser.test1" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="shuzhai" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestUser" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Tomcat 9.0.22" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.22" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="shuzhai:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/shuzhai_war" />
+          </settings>
+        </artifact>
+        <artifact name="shuzhai:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/shuzhai_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_shuzhai_2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="49174" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="shuzhai:war" />
+          <artifact name="shuzhai:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration name="remote" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" APPLICATION_SERVER_NAME="Tomcat 9.0.22" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="HOST" value="49.234.200.228" />
+      <option name="LOCAL" value="false" />
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="shuzhai:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/shuzhai" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="fd10eb2f-acac-455b-8d25-06a984ddfb41" />
+                    <id>fd10eb2f-acac-455b-8d25-06a984ddfb41</id>
+                  </TransportTarget>
+                </option>
+                <option name="watchedLocalPath" value="" />
+                <watched-path />
+                <name>CONTEXT_XML</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="fd10eb2f-acac-455b-8d25-06a984ddfb41" />
+                    <id>fd10eb2f-acac-455b-8d25-06a984ddfb41</id>
+                  </TransportTarget>
+                </transport-target>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <option name="stagingRemotePath" value="/usr/local/tomcat/apache-tomcat-8.5.46/webapps" />
+                <option name="transportStagingTarget">
+                  <TransportTarget>
+                    <option name="id" value="f04bd5c2-c8c9-4629-9b11-8e478ada515d" />
+                    <id>f04bd5c2-c8c9-4629-9b11-8e478ada515d</id>
+                  </TransportTarget>
+                </option>
+                <staging-path>/usr/local/tomcat/apache-tomcat-8.5.46/webapps</staging-path>
+                <name>STAGING</name>
+                <transport-target>
+                  <TransportTarget>
+                    <option name="id" value="f04bd5c2-c8c9-4629-9b11-8e478ada515d" />
+                    <id>f04bd5c2-c8c9-4629-9b11-8e478ada515d</id>
+                  </TransportTarget>
+                </transport-target>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" value="d5fc7e89-6477-4747-8bfb-df6650ef2998" />
+          <host-id>d5fc7e89-6477-4747-8bfb-df6650ef2998</host-id>
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="52177" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="shuzhai:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.pratice" />
+      <item itemvalue="JUnit.TestUser.test1" />
+      <item itemvalue="JUnit.BookServiceImpTest.getBooksByLatest" />
+      <item itemvalue="JUnit.BookServiceImpTest" />
+      <item itemvalue="JUnit.OtherTest.test" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.22" />
+      <item itemvalue="Tomcat Server.remote" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.pratice" />
+        <item itemvalue="JUnit.OtherTest.test" />
+        <item itemvalue="JUnit.BookServiceImpTest" />
+        <item itemvalue="JUnit.BookServiceImpTest.getBooksByLatest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="AUTOSCROLL_MODE" value="false" />
+    <option name="AUTOSCROLL_FROM_SOURCE" value="true" />
+    <option name="ACTIVE_ACTIONS" value=",ALPHA_COMPARATOR,SHOW_INHERITED,SHOW_NON_PUBLIC,SHOW_PROPERTIES,SHOW_INTERFACES" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21d76be7-cb6f-41c5-bcb3-26809360f698" name="Default Changelist" comment="" />
+      <created>1569426195897</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1569426195897</updated>
+      <workItem from="1569426198681" duration="709000" />
+      <workItem from="1569459957954" duration="8684000" />
+      <workItem from="1569577257224" duration="614000" />
+      <workItem from="1569652933139" duration="8413000" />
+      <workItem from="1569735450227" duration="8041000" />
+      <workItem from="1569759300137" duration="7930000" />
+      <workItem from="1569807093941" duration="8345000" />
+      <workItem from="1569889483912" duration="16229000" />
+      <workItem from="1570073866351" duration="28987000" />
+      <workItem from="1570204667037" duration="2091000" />
+      <workItem from="1570237490079" duration="28981000" />
+      <workItem from="1570329915543" duration="7217000" />
+      <workItem from="1570413899344" duration="7292000" />
+      <workItem from="1570433955256" duration="7727000" />
+      <workItem from="1570446695818" duration="7005000" />
+      <workItem from="1570588666128" duration="2601000" />
+      <workItem from="1570668651076" duration="765000" />
+      <workItem from="1570684547720" duration="1113000" />
+      <workItem from="1570707867904" duration="1797000" />
+      <workItem from="1570783275662" duration="5435000" />
+      <workItem from="1570843007522" duration="10725000" />
+      <workItem from="1570893126351" duration="5133000" />
+      <workItem from="1570932686303" duration="6289000" />
+      <workItem from="1570941710972" duration="17569000" />
+      <workItem from="1570966834471" duration="3352000" />
+      <workItem from="1570975402965" duration="1723000" />
+      <workItem from="1571013717478" duration="13348000" />
+      <workItem from="1571115645775" duration="11491000" />
+      <workItem from="1571153320226" duration="2022000" />
+      <workItem from="1571188189794" duration="8071000" />
+      <workItem from="1571273583877" duration="1122000" />
+      <workItem from="1571274854794" duration="2112000" />
+      <workItem from="1571286955388" duration="10697000" />
+      <workItem from="1571365541459" duration="5638000" />
+      <workItem from="1571388214357" duration="12045000" />
+      <workItem from="1571478829785" duration="38000" />
+      <workItem from="1571478906428" duration="3144000" />
+      <workItem from="1571533207026" duration="6146000" />
+      <workItem from="1571554728449" duration="7277000" />
+      <workItem from="1571717547600" duration="5190000" />
+      <workItem from="1571797486108" duration="3040000" />
+      <workItem from="1573041022954" duration="183000" />
+      <workItem from="1582257533604" duration="65000" />
+      <workItem from="1582259381869" duration="4279000" />
+      <workItem from="1582274666319" duration="17075000" />
+      <workItem from="1582463911026" duration="1419000" />
+      <workItem from="1582538606052" duration="1337000" />
+      <workItem from="1583763015561" duration="291000" />
+      <workItem from="1583905799483" duration="1002000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

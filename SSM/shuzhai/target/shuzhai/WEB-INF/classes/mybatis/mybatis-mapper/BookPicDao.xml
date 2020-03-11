@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+    public void addBookPic(List<Book> bookpics);
+
+    public void deletePic(int picID);
+
+    public void setPicInvaild(int picID);
+
+    public BookPic getBookPicsByBookID(int bookID);
+-->
+
+<mapper namespace="com.shuzhai.dao.BookPicDao">
+    <resultMap id="BookPicMap" type="BookPic">
+        <id property="bookPicID" column="book_pic_id"/>
+        <result property="bookID" column="book_id"/>
+        <result property="isMainPic" column="is_main_pic"/>
+        <result property="picPath" column="pic_path"/>
+        <result property="picStatus" column="pic_status"/>
+    </resultMap>
+
+<!--     -->
+
+    <insert id="addBookPic" parameterType="BookPic" useGeneratedKeys="true" keyProperty="bookPicID">
+        insert into book_pic(book_id, pic_path, is_main_pic, pic_status)
+        values(#{bookId}, #{picPath}, #{isMainPic}, #{picStatus})
+    </insert>
+
+    <insert id="addBookPics" parameterType="java.util.List">
+        insert into book_pic(book_id, pic_path, is_main_pic, pic_status)
+        values
+        <foreach collection="list" item="pic" separator=",">
+            (
+                #{pic.bookId}, #{pic.picPath}, #{pic.isMainPic}, #{pic.picStatus}
+            )
+        </foreach>
+    </insert>
+
+    <select id="getBookPicsByBookID" resultType="BookPic" >
+        SELECT book_pic_id, book_id, pic_path, is_main_pic, pic_status
+        FROM book_pic WHERE book_id = #{bookId}
+    </select>
+
+    <select id="getBookPicByBookPicID" resultType="BookPic">
+        SELECT book_pic_id, book_id, pic_path, is_main_pic, pic_status
+        FROM book_pic WHERE book_pic_id = #{bookPicId}
+    </select>
+
+    <delete id="deletePicByPicId">
+        DELETE FROM book_pic WHERE book_pic_id = #{bookPicId}
+    </delete>
+
+
+
+</mapper>

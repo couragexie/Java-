@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- 为常用的 JavaBean 取别名，默认为类名-->
+    <typeAliases>
+        <typeAlias type="com.bookstore.domain.User" alias="User"></typeAlias>
+
+        <typeAlias type="com.bookstore.domain.Book" alias="Book"></typeAlias>
+    </typeAliases>
+
+</configuration>

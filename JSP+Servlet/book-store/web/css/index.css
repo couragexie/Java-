@@ -1,0 +1,357 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	font-family: Georgia, serif;
+  }
+  
+a{
+	text-decoration: none;
+	display:block;
+}
+a:hover{
+	cursor:pointer;
+}
+
+li{
+	list-style: none;
+	float:left;
+}
+ul{
+	margin:0;	
+}
+
+/* header 样式 */
+/* header topnav 样式 */
+.header{
+	width:1280px;
+	height: 182px;
+
+}
+.header .topnav{
+	width:100%;
+	height:35px;
+	background-color: #f9f9f9;
+	border-bottom: 1px solid #f2f2f2;
+}
+.header .topnav .container{
+	width:1200px;
+	height:34px;
+	margin:0 auto;
+	position:relative;
+}
+.header .topnav .container ul {
+	position:absolute;
+	margin-top: 10px;
+	right:30px;
+}
+.header .topnav .container ul li{
+   width:63px;
+   height: 20px; /*盒子高度*/             
+   font-size: 12px; /*文字大小*/       
+   color:rgb(100, 100, 100);
+   text-align: center; /*盒子内的文本水平居中*/
+   list-style: none;
+   float:right;
+   text-decoration: none;
+   padding:0 10px;
+   border-left: 1px solid #fff;
+   
+}
+.header .topnav .container ul  p{
+	float:left;
+	margin:0;
+	font-size:14px;
+}
+
+.header .topnav .container ul li a{
+	display:block;
+	width:60px;
+	color:rgb(100, 100, 100);
+	font-size:14px;
+}
+
+
+
+.header .topnav .container ul li :hover{
+	color:#ff2832;
+}
+
+
+/* header-main 样式*/
+.header .header-main{
+	width:100%;
+	height:100px;
+
+}
+.header .header-main .container{
+	width:1200px;
+	height:34px;
+	margin:0 auto;
+	position: relative;
+	
+}
+.header .header-main .container .logo{
+	width:80px;
+	height:80px;
+	float:left;
+}
+.header .header-main .container .logo img{
+	width:120px;
+	height:100px;
+	margin-left:98px;
+	margin-bottom: 3px;
+}
+
+/* 搜索框样式 */
+
+.header .header-main .container .search{
+	
+	/* width:500px; */
+}
+
+.header .header-main .container .search .search-box{
+	width:401px;
+	height:40px;
+	position:absolute;		
+	border:1px solid #ff2832;
+	top:22px;
+	left:350px;
+	padding:0 5px;
+	outline:none;    /*该效果去除 input 输入框点击出现的边框*/
+
+}
+
+.header .header-main .container .search .button{
+	width:45px;
+	height:42px;
+	background-color: #ff2832;
+	position:absolute;
+	border:none;
+	top:22px;
+	right:392px;
+	z-index: 1;
+}
+.header .header-main .container .search .button-box:hover{
+	cursor:pointer;		
+}
+
+.header .header-main .container  .search .search-icon{
+	display:block;
+	background-image: url(../img/search.png); /*引入图片图片*/
+	background-repeat: no-repeat; /*设置图片不重复*/
+	background-position: 0px 0px; /*图片显示的位置*/
+	width: 35px; /*设置图片显示的宽*/
+	height: 35px; /*图片显示的高*/
+	position:absolute;
+	right:397px;
+	top:27px;
+	z-index:5;
+}
+
+/* 购物车样式 */
+
+.header .header-main .container  .shopping-car{
+	width:115px;
+	height:39px;
+	background-color: #ff2832;
+	border:1px solid #ff2832;
+
+	position: absolute;
+	z-index: 1;
+	right:130px;
+	top:22px;
+}
+.header .header-main .container  .shopping-car :hover{
+
+
+}
+
+.header .header-main .container  .shopping-car .shopping-a{
+	/* display: block; */
+	width:115px;
+	height:39px;
+	text-align: center;
+}
+.header .header-main .container  .shopping-car .shopping-a .icon{
+	display:block;
+	background-image: url(../img/购物车-while.png); /*引入图片图片*/
+	background-repeat: no-repeat; /*设置图片不重复*/
+	background-position: 0px 0px; /*图片显示的位置*/
+	width: 32px; /*设置图片显示的宽*/
+	height: 32px; /*图片显示的高*/
+	position:absolute;
+	right:76px;
+	top:3px;
+	z-index:5;
+}
+
+.header .header-main .container  .shopping-car .shopping-a .words{
+	text-align: center;
+	color:#fff;
+	float:right;
+	margin-right:12px;
+	margin-top:12px;
+	font-size:15px;
+}
+
+/* order 样式 */
+
+.header .header-main .container .shopping-order a{
+	width:83px;
+	height:39px;
+	color: #646464;
+	background-color: #f6f6f6;
+	border:1px solid #bcbcbc;
+	position:absolute;
+	right:47px;
+	top:22px;
+	text-align: center;
+	line-height: 39px;
+}
+.header .header-main .container .shopping-order a:hover{
+	color:#ff2832;
+}
+
+/*  header 底部样式 */
+.header .header-bottom {
+	width:1280px;
+	height:45px;
+	border-bottom: 3.5px solid #ff2832;
+}
+.header .header-bottom .container{
+	width:1200px;
+	height:45px;
+	margin:0 auto;
+
+}
+.header .header-bottom .container ul{
+	width:800px;
+	height:100%;
+	margin:0 auto;
+	text-align: center;	
+
+	padding:0 30px;
+
+}
+.header .header-bottom .container ul li{
+	margin-left:15px;
+}
+
+.header .header-bottom .container ul li a{
+	font:16px/40px "Microsoft Yahei";
+	font-weight:bold;
+	color:#323232;
+	padding:0 15px;
+}
+.header .header-bottom .container ul li a:hover{ 
+	color :#ff2832;
+}
+
+
+/* main */
+.main{
+	width:1280px;
+	margin-top:20px;
+}
+.main .main-left{
+	width:980px;
+	
+}
+.main .main-left .shop-list{
+	width:980px;
+	
+}
+.main .main-left .shop-list li{
+	width:980px;
+	height:242px;
+	position:relative;
+	/* background-color: yellowgreen; */
+}
+
+.main .main-left .shop-list li:hover{
+	background-color: #f8f8f8;
+}
+
+.main .main-left .shop-list li .book-img{
+	position:absolute;
+	left:24px;
+	top:22px;
+}
+.main .main-left .shop-list li .book-img img{
+	height:200px;
+	width:200px;
+}
+/* 书的信息 */
+.main .main-left .shop-list li .book-info{
+	position:absolute;
+	left:250px;
+	top:28px;
+	line-height: 28px;
+}
+.main .main-left .shop-list li .book-info .money{
+	color:#ff2832;
+	font-size:20px;
+}
+
+.main .main-left .shop-list li .book-info a{
+	display:inline;
+
+	/* background-color: #ff2832; */
+}
+.main .main-left .shop-list li .book-info a:hover{
+	text-decoration: underline;
+	/* background-color: #ff2832; */
+}
+
+.main .main-left .shop-list li .book-info label{
+	margin:5px 0;
+}
+.main .main-left .shop-list li .book-info p{
+	width:600px;
+	height:60px;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	margin:0;
+}
+.main .main-left .shop-list li .purchase {
+	position:absolute;
+	right:30px;	
+	top:38px;
+	/* background-color: #ff2832; */
+}
+
+/*  */
+.main .main-left .shop-list li .purchase .add-shopping{
+	width:100px;
+	height:30px;
+	background-color: #f22f00;
+
+	color:#fff;
+	border: none;
+	text-align: center;
+	line-height: 28px;
+	border-radius: 3px;
+	/* padding:5px; */
+}
+.main .main-left .shop-list li .purchase a.add-shopping:hover{
+	background-color: #f00000;
+}
+.main .main-left .shop-list li .purchase .collect{
+	width:100px;
+	height:28px;
+	color:#ff2832;
+	background-color:#ffedee;
+	border:1px solid #ff2832;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 28px;
+	margin-top:15px;
+	/* margin-left:8px; */
+}
+
+.main .main-left .shop-list li .purchase .collect:hover{
+	background-color: #ffd7d7;	
+
+}

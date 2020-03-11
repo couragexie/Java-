@@ -1,0 +1,148 @@
+html {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+.header {
+	width: 100%;
+	height: 90px;
+	border: 1px solid #cccccc;
+	margin: auto 0;
+	background-color: #c8e4f0;
+}
+
+.header .headline {
+	margin-left: 70px;
+	margin-top: 36px;
+	font-size: 28px;
+}
+
+.main {
+	width: 100%;
+	height: 470px;
+	/* background-color:#4094e0; */
+	/* margin:0 auto; */
+	margin-top: 2px;
+}
+
+.main .left-section {
+	position: relative;
+	left: 0;
+	width: 220px;
+	height: 100%;
+	/* background-color:aquamarine; */
+	border: 1px solid #e0e8e9;
+	margin-left: 10px;
+	margin-top: 5px;
+}
+
+.main .left-section .left-inner-top {
+	width: 100%;
+	height: 66px;
+	/* background-color: bisque; */
+	border-bottom: 1px solid #c0c0c0;
+}
+
+.main .left-section .left-inner-top .head-img {
+	width: 50px;
+	height: 50px;
+	margin-left: 20px;
+	margin-top: 5px;
+	/* border:0.5px solid #c0c0c0; */
+	border-radius: 3px;
+}
+
+.main .left-section .inner-option {
+	width: 100%;
+	/* background-color: blueviolet; */
+	position: absolute;
+	top: 56px;
+	/* left:14px; */
+	/* overflow:hidden; */
+}
+
+/*选项卡效果*/
+/*设置一个居中的大盒子*/
+.inner-option ul {
+	position: relative;
+}
+
+.inner-option ul li {
+	width: 80%;
+	height: 38px;
+	border-bottom: 1px solid #c0c0c0;
+	text-align: center;
+	line-height: 38px;
+}
+
+.inner-option li .option {
+	display: none;
+}
+
+.inner-option  li .op_label {
+	display: block;
+}
+
+.inner-option .content {
+	position: absolute;
+	width: 1018px;
+	height: 470px;
+	/* background-color:yellow; */
+	left: 228px;
+	top: -72px;
+	display: none;
+	border: 1px solid #c0c0c0;
+}
+/* 点击选项卡效果 */
+.inner-option li .option:checked+label {
+	background-color: khaki;
+	color: #fff;
+}
+/*加入点击弹出卡片效果*/
+.inner-option li .option:checked+label+div {
+	display: block;
+}
+
+.info {
+	position: absolute;
+	left: 150px;
+	top: 66px;
+}
+/* .modifyPW{
+                position:absolute;
+                right:12px;
+                top:12px;
+            } */
+/* #pw2{
+                margin-left:20px;
+            } */
+.pw2 {
+	margin-right: 82px;
+}
+
+.table-info{
+	position: absolute;
+	left: 376px;
+	top: 93px;
+}
+
+table th, td {
+	background: #FFF;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+
+    User getUser(String username);
+
+    int addUser(User user);
+
+    int deleteUser(Integer id);
+
+    User getAdmin(User user);
+
+    List<User> getAllUser();
+
+    User getUserByUsernameAndPassword(User user);
+
+-->
+
+
+<mapper namespace="com.bookstore.dao.UserDao">
+
+    <select id="getUser"  resultType="User">
+        SELECT * FROM user WHERE username=#{username}
+    </select>
+    <!-- parameterType 中的类在 mybatis-config.xml 定义了别名  -->
+    <insert id="addUser"  parameterType="User">
+        INSERT INTO user(username, password, telephone) VALUES(#{username}, #{password}, #{telephone})
+    </insert>
+
+    <delete id="deleteUser" parameterType="Integer">
+        DELETE FROM user WHERE id=#{id}
+    </delete>
+
+    <select id="getAdmin" parameterType="User" resultType="User">
+        SELECT * FROM administration WHERE username=#{username} and password=#{password}
+    </select>
+
+    <!-- 返回 List 集合， resultType 指定list 中 type 类型   /-->
+    <select id="getAllUser" resultType="User">
+        SELECT * FROM user
+    </select>
+
+    <select id="getUserByUsernameAndPassword" resultType="User">
+        SELECT * FROM user WHERE username=#{username} and password= #{password}
+    </select>
+
+</mapper>
