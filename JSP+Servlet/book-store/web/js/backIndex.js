@@ -1,31 +1,30 @@
+$(function () {
 
-$(function(){
+    // Í¼Æ¬ï¿½Ï´ï¿½ï¿½ï¿½Ô¤ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    $("#uploads").change(function () {
 
-    // Í¼Æ¬ÉÏ´«²¢Ô¤ÀÀ¹¦ÄÜ
-    $("#uploads").change(function(){
-
-        $("#uploads").css("opacity","0");
-        // ÎÄ¼þ¶ÁÈ¡¶ÔÏó
+        $("#uploads").css("opacity", "0");
+        // ï¿½Ä¼ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
         var reader = new FileReader();
-        // ÒªÓÃ DOM ¶ÔÏóÈ¥»ñÈ¡£¬²»ÄÜÓÃ jquery È¥»ñÈ¡
+        // Òªï¿½ï¿½ DOM ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ jquery È¥ï¿½ï¿½È¡
         var f = document.querySelector("#file").files[0];
         console.log(f);
         reader.readAsDataURL(f);
-        reader.onload = function(e){
+        reader.onload = function (e) {
             document.querySelector("#bookImg").src = this.result;
             console.log(this.result);
-            $("#bookImg").css("display","block");
+            $("#bookImg").css("display", "block");
         }
     });
 
 
-    $("#logOut").click(function(){
-        //alert("µã»÷ÁË");
+    $("#logOut").click(function () {
+        //alert("ï¿½ï¿½ï¿½ï¿½ï¿½");
         $.ajax({
-           url:"AdLoginServlet",
-           method:"POST",
-            data:{"action":"logOut"},
-            success:function(){
+            url: "AdLoginServlet",
+            method: "POST",
+            data: {"action": "logOut"},
+            success: function () {
                 window.location.onload();
 
             }

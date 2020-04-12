@@ -9,7 +9,7 @@ import java.util.List;
 
 //@Repository()
 public class BookDaoImp extends BaseDao<Book> implements BookDao {
-	
+
     @Override
     public Book getBook(Integer id) {
         String sql = "SELECT * FROM book Where id=?";
@@ -20,8 +20,8 @@ public class BookDaoImp extends BaseDao<Book> implements BookDao {
     public int addBook(Book book) {
         String sql = "INSERT INTO book(bookName, author, price, press, classifyID, intro, stock, imgPath) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
         return this.update(sql, book.getBookName(), book.getAuthor(), book.getPrice(),
-                                book.getPress(), book.getClassifyID(),
-                                book.getIntro(), book.getStock(), book.getImgPath());
+                book.getPress(), book.getClassifyID(),
+                book.getIntro(), book.getStock(), book.getImgPath());
     }
 
     @Override
@@ -36,15 +36,14 @@ public class BookDaoImp extends BaseDao<Book> implements BookDao {
         return this.update(sql, id);
     }
 
-   
 
     @Override
     public int updateBook(Book book) {
         String sql = "UPDATE book SET bookName=?, author=?, price=?," +
-                     "press=?, classifyID=?, intro=?, stock=?, imgPath=? WHERE id=?";
+                "press=?, classifyID=?, intro=?, stock=?, imgPath=? WHERE id=?";
         return this.update(sql, book.getBookName(), book.getAuthor(), book.getPrice(),
-                                book.getPress(), book.getClassifyID(), book.getIntro(),
-                                book.getStock(), book.getImgPath(), book.getId());
+                book.getPress(), book.getClassifyID(), book.getIntro(),
+                book.getStock(), book.getImgPath(), book.getId());
     }
 
     @Override

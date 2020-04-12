@@ -48,13 +48,13 @@ public class BookServiceImp implements BookService {
     private static final Logger log = Logger.getLogger(BookServiceImp.class);
 
 
-    public boolean addBook(Book book, List<MultipartFile> pictures){
+    public boolean addBook(Book book, List<MultipartFile> pictures) {
         defaultValue(book);
-        try{
+        try {
             bookDao.addBook(book);
             log.info("添加 book 的信息" + book);
             uploadBookPics(book.getBookId(), pictures);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -62,35 +62,35 @@ public class BookServiceImp implements BookService {
     }
 
     // 设置图书默认值
-    private void defaultValue(Book book){
+    private void defaultValue(Book book) {
         book.setInDate(new Timestamp(System.currentTimeMillis()));
         book.setAditStatus(1);
         book.setInSelling(1);
     }
 
     // 处理 book 图片上传路径，返回 上传的路径
-    private void uploadBookPics(int bookID, List<MultipartFile> pictures){
+    private void uploadBookPics(int bookID, List<MultipartFile> pictures) {
         List<BookPic> bookPics = new ArrayList<>();
 
-        for (MultipartFile pic : pictures){
+        for (MultipartFile pic : pictures) {
             // 判断当前上传文件是否为空
             //if(pic.isEmpty())
-                //continue;
+            //continue;
             String storePath = HandlePathUtil.handlePicPath(pic.getOriginalFilename(), 1);
             BookPic bookPic = null;
             // 设置文件指定位置
             File disk = new File(storePath);
-            log.info("disk的位置："+ disk.getAbsolutePath());
-            try{
+            log.info("disk的位置：" + disk.getAbsolutePath());
+            try {
                 // 将文件上传到指定位置
                 FileUtils.copyInputStreamToFile(pic.getInputStream(), disk);
                 // 存储图片的信息
-                bookPic = new BookPic(bookID, 0, 1,storePath);
+                bookPic = new BookPic(bookID, 0, 1, storePath);
                 log.info("上传图书的照片：" + bookPic);
-            }catch(Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-            if(bookPic != null)
+            if (bookPic != null)
                 bookPics.add(bookPic);
         }
         // 设置第一张图片为主图
@@ -101,20 +101,19 @@ public class BookServiceImp implements BookService {
 
 
     /**
-     *
      * @Author: jay
      * @Description: 处理上传一张图片
      * @Date 2019/10/18 12:54
      **/
-    public BookPic uploadBookPic(Integer bookId, CommonsMultipartFile picture){
+    public BookPic uploadBookPic(Integer bookId, CommonsMultipartFile picture) {
         String storePath = HandlePathUtil.handlePicPath(picture.getOriginalFilename(), 1);
         File file = new File(storePath);
         BookPic bookPic;
-        try{
+        try {
             FileUtils.copyInputStreamToFile(picture.getInputStream(), file);
-            bookPic = new BookPic(bookId, 0, 1,storePath);
+            bookPic = new BookPic(bookId, 0, 1, storePath);
             bookPicDao.addBookPic(bookPic);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
@@ -123,116 +122,114 @@ public class BookServiceImp implements BookService {
     }
 
     /**
-     *
      * @Author: jay
      * @Description: 删除图书一张图片
      * @Date 2019/10/18 12:54
      **/
-    public boolean deleteBookPicByBookPicId(Integer bookPicId){
-       BookPic bookPic = null;
-       String storePath = null;
-       try {
-           bookPic = bookPicDao.getBookPicByBookPicID(bookPicId);
-           log.info("待删除的图片：" + bookPic);
-           storePath = bookPic.getPicPath();
-           bookPicDao.deletePicByPicId(bookPicId);
-       }catch (Exception e){
-           e.printStackTrace();
-       }
-       boolean flag = HandleFileUtil.deleteFileByStorePath(storePath);
-       if(!flag)
-           return false;
+    public boolean deleteBookPicByBookPicId(Integer bookPicId) {
+        BookPic bookPic = null;
+        String storePath = null;
+        try {
+            bookPic = bookPicDao.getBookPicByBookPicID(bookPicId);
+            log.info("待删除的图片：" + bookPic);
+            storePath = bookPic.getPicPath();
+            bookPicDao.deletePicByPicId(bookPicId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        boolean flag = HandleFileUtil.deleteFileByStorePath(storePath);
+        if (!flag)
+            return false;
 
-       return true;
+        return true;
     }
 
     /**
-     *
      * @Author: jay
      * @Description: 获取图书分类信息
      * @Date 2019/10/20 11:56
      **/
-    public List<Category> getCategoryInfo(){
+    public List<Category> getCategoryInfo() {
         return bookDao.getCategoryInfo();
     }
 
-    public Page<Book> getBooksByLatest(Integer pageNo, Integer pageSize){
+    public Page<Book> getBooksByLatest(Integer pageNo, Integer pageSize) {
         Page<Book> page = new Page<>();
-        try{
+        try {
             int count = getBookDao.getBooksCount();
             page.setTotalCount(count);
             // 必须先获取页面总数，才能设置 pageNo, 不然会报错的。
             page.setPageNo(pageNo);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
 
-        if(pageSize != null)
+        if (pageSize != null)
             page.setPageSize(pageSize);
 
-        try{
+        try {
             System.out.println(" index ：" + page.getIndex());
-            List<Book> books =  getBookDao.getBooksByLatest(page.getIndex(), page.getPageSize());
+            List<Book> books = getBookDao.getBooksByLatest(page.getIndex(), page.getPageSize());
             getBooksPicByBookID(books);
             page.setPageData(books);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
         return page;
     }
 
-    private List<Book> getBooksPicByBookID(List<Book> books){
-        for(Book book: books){
-            try{
+    private List<Book> getBooksPicByBookID(List<Book> books) {
+        for (Book book : books) {
+            try {
                 List<BookPic> bookPics = bookPicDao.getBookPicsByBookID(book.getBookId());
-                for(BookPic bookPic: bookPics) {
+                for (BookPic bookPic : bookPics) {
                     String url = HandlePathUtil.storePathTransformUrl(bookPic.getPicPath());
                     bookPic.setPicPath(url);
                     System.out.println(bookPic);
                 }
                 //System.out.println(bookPics.get(0));
                 book.setBookPics(bookPics);
-            }catch (Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         return books;
     }
 
-    public List<Book> getPublishedBooksByUserId(Integer userId){
+    public List<Book> getPublishedBooksByUserId(Integer userId) {
         List<Book> books = bookDao.getPublishedBooksByUserId(userId);
-        if(books.isEmpty())
+        if (books.isEmpty())
             return null;
-        for(Book book: books){
+        for (Book book : books) {
             List<BookPic> bookPics = bookPicDao.getBookPicsByBookID(book.getBookId());
             book.setBookPics(bookPics);
         }
         return books;
     }
 
-    public Page<Book> getBooksByCategory(Integer category, Integer pageNo, Integer pageSize){
-        log.info("category:"+ category + "pageNo：" + pageNo + "pageSize：" + pageSize);
+    public Page<Book> getBooksByCategory(Integer category, Integer pageNo, Integer pageSize) {
+        log.info("category:" + category + "pageNo：" + pageNo + "pageSize：" + pageSize);
         Page<Book> page = new Page<>();
-        try{
+        try {
             // 设置获取书籍总数量
             Integer count = getBookDao.getBooksCountByCategory(category);
             page.setTotalCount(count);
             page.setPageNo(pageNo);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
 
-        if(pageSize != null)
+        if (pageSize != null)
             page.setPageSize(pageSize);
 
-        try{
+        try {
             List<Book> books = getBookDao.getBooksByCategory(page.getIndex(), page.getPageSize(), category);
             getBooksPicByBookID(books);
             page.setPageData(books);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return null;
         }

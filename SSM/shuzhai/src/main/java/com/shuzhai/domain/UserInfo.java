@@ -22,7 +22,7 @@ public class UserInfo {
     public UserInfo() {
     }
 
-    public UserInfo(Integer userID, String userName , BigDecimal balance, String region, int collectionNum, int followNum, int fansNum, int goodsNum) {
+    public UserInfo(Integer userID, String userName, BigDecimal balance, String region, int collectionNum, int followNum, int fansNum, int goodsNum) {
         this.userId = userID;
         this.userName = userName;
         this.balance = balance;

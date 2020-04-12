@@ -21,7 +21,7 @@
         <result property="picStatus" column="pic_status"/>
     </resultMap>
 
-<!--     -->
+    <!--     -->
 
     <insert id="addBookPic" parameterType="BookPic" useGeneratedKeys="true" keyProperty="bookPicID">
         insert into book_pic(book_id, pic_path, is_main_pic, pic_status)
@@ -33,12 +33,12 @@
         values
         <foreach collection="list" item="pic" separator=",">
             (
-                #{pic.bookId}, #{pic.picPath}, #{pic.isMainPic}, #{pic.picStatus}
+            #{pic.bookId}, #{pic.picPath}, #{pic.isMainPic}, #{pic.picStatus}
             )
         </foreach>
     </insert>
 
-    <select id="getBookPicsByBookID" resultType="BookPic" >
+    <select id="getBookPicsByBookID" resultType="BookPic">
         SELECT book_pic_id, book_id, pic_path, is_main_pic, pic_status
         FROM book_pic WHERE book_id = #{bookId}
     </select>
@@ -51,7 +51,6 @@
     <delete id="deletePicByPicId">
         DELETE FROM book_pic WHERE book_pic_id = #{bookPicId}
     </delete>
-
 
 
 </mapper>

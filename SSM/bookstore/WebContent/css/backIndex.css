@@ -1,216 +1,237 @@
-body{
-    margin:0;
-    padding:0;
+body {
+    margin: 0;
+    padding: 0;
     /* background-color: aquamarine; */
 }
-a{
+
+a {
     text-decoration: none;
-    display:block;
+    display: block;
 }
-a:hover{
-    cursor:pointer;
+
+a:hover {
+    cursor: pointer;
     text-decoration: none;
 }
-li{
-    list-style:none;
+
+li {
+    list-style: none;
 }
-h3{
+
+h3 {
     display: inline-block;
-    font-size:22px;
-}
-textarea{
-
-    resize:none;
+    font-size: 22px;
 }
 
+textarea {
 
-/* µ¼º½À¸±êÇ©ÑùÊ½ */
-.header .nav_logoBox{
-    width:600px;
-    float:left;
-    margin-top:8px
-}
-.top{
-    height:78px;
-    margin:0;
-
-}
-.header .top .logo{
-    height:68px;
-    width:72px;
-    float:left;
-    margin-top:-5px;
-    margin-bottom:2px;
-    margin-left:24px;
-}
-.header .nav_logoBox h3{
-    margin-left:18px;
-    font-size:22px;
-    margin-top:18px;
+    resize: none;
 }
 
-.nav-box{
+
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç©ï¿½ï¿½Ê½ */
+.header .nav_logoBox {
+    width: 600px;
+    float: left;
+    margin-top: 8px
+}
+
+.top {
+    height: 78px;
+    margin: 0;
+
+}
+
+.header .top .logo {
+    height: 68px;
+    width: 72px;
+    float: left;
+    margin-top: -5px;
+    margin-bottom: 2px;
+    margin-left: 24px;
+}
+
+.header .nav_logoBox h3 {
+    margin-left: 18px;
+    font-size: 22px;
+    margin-top: 18px;
+}
+
+.nav-box {
     /* margin:auto 0; */
-    margin-top:14px;
-    font-size:18px;
+    margin-top: 14px;
+    font-size: 18px;
 
 }
 
-/* main ÖÐµÄÑùÊ½ */
-.main{
-    margin-top:16px;
+/* main ï¿½Ðµï¿½ï¿½ï¿½Ê½ */
+.main {
+    margin-top: 16px;
 }
 
-/* mian ÖÐ ²à±ßÀ¸µÄÑùÊ½*/
-.main .aside-left{
-    height:480px;
-    width:200px;
+/* mian ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
+.main .aside-left {
+    height: 480px;
+    width: 200px;
     background-color: #2d3e4ff2;
 
-    border-radius:6px;
-    float:left;
+    border-radius: 6px;
+    float: left;
 }
+
 .main .aside-left ul {
-    padding:0;
-    margin:0;
-    margin-top:20px
+    padding: 0;
+    margin: 0;
+    margin-top: 20px
 }
-/*¸¨ÖúºÐ×Ó£¬°ïÖú¶¨Î»*/
-.box{
-    height:36px;
+
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»*/
+.box {
+    height: 36px;
 }
-.main .aside-left ul li{
-    height:52px;
-    width:200px;
-    margin:0 auto;
-    float:left;
-    font-size:16px;
+
+.main .aside-left ul li {
+    height: 52px;
+    width: 200px;
+    margin: 0 auto;
+    float: left;
+    font-size: 16px;
     /* text-align: center; */
-    padding-left:60px;
+    padding-left: 60px;
     line-height: 52px;
 }
-.main .aside-left ul li:hover{
-    background-color:#425261;
+
+.main .aside-left ul li:hover {
+    background-color: #425261;
 
 }
-.main .aside-left ul li a{
-    color:#fff;
+
+.main .aside-left ul li a {
+    color: #fff;
 }
 
-/*  main ÖÐ Ö÷ÄÚÈÝÑùÊ½ */
-.main .section{
-    height:480px;
-    width:1024px;
+/*  main ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ */
+.main .section {
+    height: 480px;
+    width: 1024px;
     background-color: #f8f8f8;
-    float:right;
-    margin-right:14px;
+    float: right;
+    margin-right: 14px;
     border-radius: 6px;
 }
+
 /*  */
-.main .section .headline{
-    height:30px;
-    padding-top:12px;
+.main .section .headline {
+    height: 30px;
+    padding-top: 12px;
 }
-.main .section .headline p{
-    font-size:20px;
+
+.main .section .headline p {
+    font-size: 20px;
     font-weight: bold;
-    margin-left:28px;
+    margin-left: 28px;
 
 }
 
-/* main ÖÐ content µÄÑùÊ½ */
-.main .section .content{
-    height:400px;
-    width:880px;
-    background-color:#fff;
-    margin:0 auto;
+/* main ï¿½ï¿½ content ï¿½ï¿½ï¿½ï¿½Ê½ */
+.main .section .content {
+    height: 400px;
+    width: 880px;
+    background-color: #fff;
+    margin: 0 auto;
     border-radius: 6px;
-    position:relative;
+    position: relative;
 }
 
-/* ÉÏ´«Í¼ÊéÍ¼Æ¬ÑùÊ½ */
-.main .section .content .showImg .book_img{
-    height:180px;
-    width:171px;
+/* ï¿½Ï´ï¿½Í¼ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ê½ */
+.main .section .content .showImg .book_img {
+    height: 180px;
+    width: 171px;
     background-color: #f8f8f8;
-    float:left;
-    margin-left:120px;
-    margin-top:45px;
-}
-.main .section .content .showImg .book_img img{
-    height:100%;
-    width:100%;
-    display:none;
-}
-.main .section .content .showImg .uploads{
-    position:absolute;
-    width:161px;
-    height:170px;
-    text-align:center;
-    top:50px;
-    left:125px;
-
-}
-.main .section .content .showImg .uploads span{
-    position:absolute;
-    top:62px;
-    right:54px;
-
-}
-.main .section .content .showImg .uploads .filepath{
-    height:100%;
-    width:100%;
-    opacity:0;
+    float: left;
+    margin-left: 120px;
+    margin-top: 45px;
 }
 
-
-/* Í¼ÊéÐÅÏ¢ÑùÊ½ */
-
-.form-group{
-    margin-top:10px;
+.main .section .content .showImg .book_img img {
+    height: 100%;
+    width: 100%;
+    display: none;
 }
 
-.input{
-    width:120px;
-    margin-left:10px;
+.main .section .content .showImg .uploads {
+    position: absolute;
+    width: 161px;
+    height: 170px;
+    text-align: center;
+    top: 50px;
+    left: 125px;
 
 }
 
-.main .section .content .info{
-    position:absolute;
-    right:252px;
-    top:45px;
+.main .section .content .showImg .uploads span {
+    position: absolute;
+    top: 62px;
+    right: 54px;
+
+}
+
+.main .section .content .showImg .uploads .filepath {
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+}
+
+
+/* Í¼ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½Ê½ */
+
+.form-group {
+    margin-top: 10px;
+}
+
+.input {
+    width: 120px;
+    margin-left: 10px;
+
+}
+
+.main .section .content .info {
+    position: absolute;
+    right: 252px;
+    top: 45px;
 
 
 }
-.main .section .content .choice{
+
+.main .section .content .choice {
     /* height:52px; */
     /* width:88px; */
-    position:absolute;
-    right:50px;
-    top:60px;
+    position: absolute;
+    right: 50px;
+    top: 60px;
 
 }
-.main .section .content .classify_words{
-    position:absolute;
-    right:168px;
-    top:63px;
-}
-.main .section .content .intro{
-    height:88px;
-    width:510px;
-    position:absolute;
-    bottom:68px;
-    left:120px;
-    resize:none;
+
+.main .section .content .classify_words {
+    position: absolute;
+    right: 168px;
+    top: 63px;
 }
 
-.main .section .content #submit{
-    width:120px;
-    height:38px;
+.main .section .content .intro {
+    height: 88px;
+    width: 510px;
+    position: absolute;
+    bottom: 68px;
+    left: 120px;
+    resize: none;
+}
+
+.main .section .content #submit {
+    width: 120px;
+    height: 38px;
     position: absolute;
     bottom: 5px;
-
 
 
 }

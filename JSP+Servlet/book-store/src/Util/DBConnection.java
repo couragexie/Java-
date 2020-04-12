@@ -7,36 +7,37 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 
 public class DBConnection {
-	private static String url = "jdbc:mysql://localhost:3306/book-store?userSSL=true&serverTimezone=GMT%2B8";
-	private static String root = "root";
-	private static String password = "password";
-	private static Connection con = null;
+    private static String url = "jdbc:mysql://localhost:3306/book-store?userSSL=true&serverTimezone=GMT%2B8";
+    private static String root = "root";
+    private static String password = "password";
+    private static Connection con = null;
 
-	public static Connection connectDB() {
+    public static Connection connectDB() {
 
-		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-		}catch(Exception e) {}
-		
-		try {
-			con = DriverManager.getConnection(url, root, password);
-			
-			if(con == null) {
-				System.out.println("Á¬½ÓÊ§°Ü");
-			}
-			
-		}catch(Exception e) {
-			
-		}	
-		return con;
-	}
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (Exception e) {
+        }
 
-	public void close(){
-		try {
-			con.close();
-		}catch(Exception e){
-		}
+        try {
+            con = DriverManager.getConnection(url, root, password);
 
-	}
-	
+            if (con == null) {
+                System.out.println("ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½");
+            }
+
+        } catch (Exception e) {
+
+        }
+        return con;
+    }
+
+    public void close() {
+        try {
+            con.close();
+        } catch (Exception e) {
+        }
+
+    }
+
 }

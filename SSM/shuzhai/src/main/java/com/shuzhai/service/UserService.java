@@ -16,7 +16,7 @@ public interface UserService {
     public UserInfo getUserInfo(int userID);
 
     // 保存用户信息
-    public void  saveUserInfo(User user);
+    public void saveUserInfo(User user);
 
     // 修改用户信息
     public boolean modifiedUserInfo(UserInfo userInfo);

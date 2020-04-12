@@ -9,7 +9,6 @@ import java.util.List;
  * @create: 2019-10-07 16:29
  **/
 
-
 public class Page<T> {
 
     private List<T> pageData;  // 页面数据
@@ -77,7 +76,7 @@ public class Page<T> {
         // 获取页数
         int number = getTotalCount() / getPageSize();
         // 整除后，可能还有数据
-        if(getTotalCount() % getPageSize() > 0)
+        if (getTotalCount() % getPageSize() > 0)
             number += 1;
 
         return number;
@@ -85,7 +84,7 @@ public class Page<T> {
 
     // 当前页数减 1， 数据库索引是从 0 开始的， 0, 5,10,
     public int getIndex() {
-        System.out.println("index111:"+(getPageNo() - 1) * getPageSize());
+        System.out.println("index111:" + (getPageNo() - 1) * getPageSize());
         return (getPageNo() - 1) * getPageSize();
     }
 

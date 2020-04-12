@@ -12,7 +12,7 @@ import org.junit.Test;
 public class OtherTest {
 
     @Test
-    public void test(){
+    public void test() {
         String str = "/usr/local/tomcat/imgs/books";
         String sub = "/imgs";
         System.out.println(str.indexOf(sub));

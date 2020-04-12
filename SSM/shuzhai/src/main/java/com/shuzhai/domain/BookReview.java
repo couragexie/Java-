@@ -1,4 +1,5 @@
 package com.shuzhai.domain;
+
 /*
     书评类
  */

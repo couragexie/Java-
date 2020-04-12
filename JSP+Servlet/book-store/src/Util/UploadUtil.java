@@ -1,18 +1,19 @@
 package Util;
+
 import java.util.UUID;
 
 /*
-* ÎÄ¼þÉÏ´«¹¤¾ßÀà
-* ÎªÎÄ¼þ·ÖÅäÎ¨Ò»µÄÎÄ¼þÃû£¬·ÀÖ¹ÖØ¸´µ¼ÖÂµÄÎÊÌâ
-* */
+ * ï¿½Ä¼ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * Îªï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Î¨Ò»ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¹ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½
+ * */
 public class UploadUtil {
 
-    public static String getUUIDFileName(String fileName){
+    public static String getUUIDFileName(String fileName) {
         int index = fileName.lastIndexOf(".");
         String extension = fileName.substring(index);
 
-        //UUID.randomUUID() »ñÈ¡Ëæ»ú×Ö·û´®£¬ ¼ÓÉÏ toString() ×ª»»³É×Ö·û,ÔÙ½«×Ö·û¼¯ÖÐµÄ¡°-¡± £¬Ìæ»»µô
-        String uuidName = UUID.randomUUID().toString().replaceAll("-","") + extension;
+        //UUID.randomUUID() ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ toString() ×ªï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½,ï¿½Ù½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ÐµÄ¡ï¿½-ï¿½ï¿½ ï¿½ï¿½ï¿½æ»»ï¿½ï¿½
+        String uuidName = UUID.randomUUID().toString().replaceAll("-", "") + extension;
 
         return uuidName;
     }

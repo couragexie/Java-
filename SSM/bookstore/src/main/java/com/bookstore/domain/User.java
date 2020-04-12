@@ -3,17 +3,19 @@ package com.bookstore.domain;
 import java.io.Serializable;
 
 import org.hibernate.validator.constraints.NotEmpty;
+
 // 需要实现 implements Serializable 接口 才能被 jdbcTemplate 实现整个对象插入
-public class User  {
+public class User {
     private Integer id;
     @NotEmpty
     private String username;
     @NotEmpty
     private String password;
     private String telephone;
-    
 
-	public User(){}
+
+    public User() {
+    }
 
     public User(String username, String password, String telephone) {
         this.id = id;
@@ -55,8 +57,8 @@ public class User  {
     }
 
     @Override
-	public String toString() {
-		return "User [id=" + id + ", username=" + username + ", password=" + password + ", telephone=" + telephone
-				+ "]";
-	}
+    public String toString() {
+        return "User [id=" + id + ", username=" + username + ", password=" + password + ", telephone=" + telephone
+                + "]";
+    }
 }

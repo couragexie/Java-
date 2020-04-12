@@ -13,7 +13,7 @@ public interface UserDao {
     int deleteUser(Integer id);
 
     User getAdmin(User user);
-    
+
     List<User> getAllUser();
 
     User getUserByUsernameAndPassword(User user);

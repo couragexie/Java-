@@ -16,11 +16,11 @@
     </select>
 
     <select id="getBooksByLatest" resultType="Book">
-            SELECT * FROM book ORDER BY in_date desc LIMIT #{pageSize} OFFSET #{index}
+        SELECT * FROM book ORDER BY in_date desc LIMIT #{pageSize} OFFSET #{index}
     </select>
 
     <select id="getBooksByCategory" resultType="Book">
-            SELECT * FROM book WHERE category=#{category} LIMIT #{pageSize} OFFSET #{index}
+        SELECT * FROM book WHERE category=#{category} LIMIT #{pageSize} OFFSET #{index}
     </select>
 
 </mapper>

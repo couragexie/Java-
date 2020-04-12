@@ -1,0 +1,823 @@
+【xkcoding】2020-03-18 22:16:19.732 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 13664 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:16:19.735 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:16:19.737 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:16:19.880 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63787180
+【xkcoding】2020-03-18 22:16:24.156 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:16:24.202 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:16:24.367 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:16:24.526 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:16:24.562 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:16:24.673 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:16:25.414 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:16:25.556 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 7.094 seconds (JVM running for 9.711)
+【xkcoding】2020-03-18 22:16:47.480 ERROR [main] c.alibaba.druid.pool.DruidDataSource - init datasource error, url: jdbc:mysql://192.168.0.129:3306/orderSystem?useUnicode=true&characterEncoding=utf8&useuseSSL=true&serverTimezone=GMT%2B8
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1572)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:874)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1246)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1242)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:89)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy84.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy111.saveOrderMaster(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy112.saveOrderMaster(Unknown Source)
+	at com.jay.sell.dao.OrderDetailDaoTest.test(OrderDetailDaoTest.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 115 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 118 common frames omitted
+【xkcoding】2020-03-18 22:16:47.492 ERROR [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} init error
+com.mysql.cj.jdbc.exceptions.CommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at com.mysql.cj.jdbc.exceptions.SQLError.createCommunicationsException(SQLError.java:174)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:64)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836)
+	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456)
+	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246)
+	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:197)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:156)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterEventAdapter.connection_connect(FilterEventAdapter.java:38)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.FilterAdapter.connection_connect(FilterAdapter.java:786)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.filter.stat.StatFilter.connection_connect(StatFilter.java:218)
+	at com.alibaba.druid.filter.FilterChainImpl.connection_connect(FilterChainImpl.java:150)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1572)
+	at com.alibaba.druid.pool.DruidAbstractDataSource.createPhysicalConnection(DruidAbstractDataSource.java:1636)
+	at com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:874)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1246)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:1242)
+	at com.alibaba.druid.pool.DruidDataSource.getConnection(DruidDataSource.java:89)
+	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158)
+	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116)
+	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80)
+	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67)
+	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336)
+	at org.apache.ibatis.executor.SimpleExecutor.prepareStatement(SimpleExecutor.java:86)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:49)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy84.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy111.saveOrderMaster(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy112.saveOrderMaster(Unknown Source)
+	at com.jay.sell.dao.OrderDetailDaoTest.test(OrderDetailDaoTest.java:29)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+Caused by: com.mysql.cj.exceptions.CJCommunicationsException: Communications link failure
+
+The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at com.mysql.cj.exceptions.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at com.mysql.cj.exceptions.ExceptionFactory.createCommunicationsException(ExceptionFactory.java:167)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:91)
+	at com.mysql.cj.NativeSession.connect(NativeSession.java:144)
+	at com.mysql.cj.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:956)
+	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:826)
+	... 115 common frames omitted
+Caused by: java.net.ConnectException: Connection timed out: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at com.mysql.cj.protocol.StandardSocketFactory.connect(StandardSocketFactory.java:155)
+	at com.mysql.cj.protocol.a.NativeSocketConnection.connect(NativeSocketConnection.java:65)
+	... 118 common frames omitted
+【xkcoding】2020-03-18 22:16:47.497 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:16:47.546 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@63787180, started on Wed Mar 18 22:16:19 CST 2020
+【xkcoding】2020-03-18 22:16:47.553 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:16:47.561 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:17:58.324 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 9864 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:17:58.327 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:17:58.328 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:17:58.512 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42039326
+【xkcoding】2020-03-18 22:18:03.648 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:18:03.686 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:18:03.865 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:18:04.009 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:18:04.092 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:18:04.255 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:18:05.282 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:18:05.443 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 8.397 seconds (JVM running for 11.752)
+【xkcoding】2020-03-18 22:18:06.440 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:18:06.453 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status)VAULES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:18:06.978 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@42039326, started on Wed Mar 18 22:17:58 CST 2020
+【xkcoding】2020-03-18 22:18:06.983 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:18:07.007 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:19:59.824 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 16536 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:19:59.825 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:19:59.827 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:19:59.973 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@a87f8ec
+【xkcoding】2020-03-18 22:20:05.451 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:20:05.484 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:20:05.663 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:20:05.799 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:20:05.832 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:20:06.035 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:20:06.941 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:20:07.115 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 8.525 seconds (JVM running for 10.88)
+【xkcoding】2020-03-18 22:20:08.341 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:20:08.364 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VAULES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:20:09.017 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@a87f8ec, started on Wed Mar 18 22:19:59 CST 2020
+【xkcoding】2020-03-18 22:20:09.021 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:20:09.052 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:22:25.978 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 17208 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:22:25.982 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:22:25.983 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:22:26.135 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@a87f8ec
+【xkcoding】2020-03-18 22:22:30.913 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:22:30.951 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:22:31.115 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:22:31.294 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:22:31.339 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:22:31.442 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:22:32.190 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:22:32.391 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 7.521 seconds (JVM running for 9.808)
+【xkcoding】2020-03-18 22:22:33.620 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:22:33.637 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VAULES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:22:34.463 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@a87f8ec, started on Wed Mar 18 22:22:26 CST 2020
+【xkcoding】2020-03-18 22:22:34.466 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:22:34.500 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:24:01.864 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 1924 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:24:01.869 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:24:01.870 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:24:01.960 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63787180
+【xkcoding】2020-03-18 22:24:07.042 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:24:07.074 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:24:07.252 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:24:07.405 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:24:07.439 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:24:07.542 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:24:08.308 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:24:08.560 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 7.856 seconds (JVM running for 10.425)
+【xkcoding】2020-03-18 22:24:09.553 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:24:09.569 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VAULES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:24:10.036 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@63787180, started on Wed Mar 18 22:24:01 CST 2020
+【xkcoding】2020-03-18 22:24:10.043 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:24:10.068 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:24:50.414 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 6740 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:24:50.431 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:24:50.433 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:24:50.521 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@a87f8ec
+【xkcoding】2020-03-18 22:24:55.025 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:24:55.063 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:24:55.220 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:24:55.375 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:24:55.405 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:24:55.505 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:24:56.260 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:24:56.383 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 7.254 seconds (JVM running for 9.451)
+【xkcoding】2020-03-18 22:24:57.358 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:24:57.378 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VALUES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:24:57.779 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@a87f8ec, started on Wed Mar 18 22:24:50 CST 2020
+【xkcoding】2020-03-18 22:24:57.784 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:24:57.814 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:27:11.307 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 10580 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:27:11.310 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:27:11.311 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:27:11.434 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42039326
+【xkcoding】2020-03-18 22:27:16.543 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:27:16.581 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:27:16.740 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:27:16.867 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:27:16.898 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:27:16.997 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:27:17.798 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:27:17.989 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 8.091 seconds (JVM running for 10.532)
+【xkcoding】2020-03-18 22:27:19.081 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:27:19.096 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VALUES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:27:19.445 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==> Parameters: 15845416385813917844(String), 张三(String), 12345678(String), 广东省江门市五邑大学(String), 112345(String), 128.80000000000001136868377216160297393798828125(BigDecimal), 0(Integer), 0(Integer)
+【xkcoding】2020-03-18 22:27:19.461 DEBUG [main] c.j.s.d.O.saveOrderMaster - <==    Updates: 1
+【xkcoding】2020-03-18 22:27:19.464 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==>  Preparing: INSERT INTO order_detail(detail_id, order_id, product_id, product_nameproduct_price, product_quantity, product_icon) VALUES(?, ?, ?, ?, ?, ?, ?) 
+【xkcoding】2020-03-18 22:27:19.524 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@42039326, started on Wed Mar 18 22:27:11 CST 2020
+【xkcoding】2020-03-18 22:27:19.530 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:27:19.562 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:30:41.556 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 1716 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:30:41.563 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:30:41.566 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:30:41.665 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4b6e2263
+【xkcoding】2020-03-18 22:30:47.278 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:30:47.314 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:30:47.470 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:30:47.609 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:30:47.645 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:30:47.748 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:30:48.610 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:30:48.758 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 8.466 seconds (JVM running for 10.881)
+【xkcoding】2020-03-18 22:30:49.354 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:30:49.369 INFO  [main] o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@29215f06 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@2753316c, testMethod = test@OrderDetailDaoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@59505b48 testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7c0c77c7, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@433d61fb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5223e5ee, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@70e8f8e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@59edb4f5]; rollback [true]
+【xkcoding】2020-03-18 22:30:49.769 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VALUES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:30:50.115 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==> Parameters: 15845418497182195643(String), 张三(String), 12345678(String), 广东省江门市五邑大学(String), 112345(String), 128.80000000000001136868377216160297393798828125(BigDecimal), 0(Integer), 0(Integer)
+【xkcoding】2020-03-18 22:30:50.123 DEBUG [main] c.j.s.d.O.saveOrderMaster - <==    Updates: 1
+【xkcoding】2020-03-18 22:30:50.125 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==>  Preparing: INSERT INTO order_detail(detail_id, order_id, product_id, product_nameproduct_price, product_quantity, product_icon) VALUES(?, ?, ?, ?, ?, ?, ?) 
+【xkcoding】2020-03-18 22:30:50.160 INFO  [main] o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@29215f06 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@2753316c, testMethod = test@OrderDetailDaoTest, testException = org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.reflection.ReflectionException: There is no getter for property named 'productQuantity' in 'class com.jay.sell.entity.OrderDetail', mergedContextConfiguration = [WebMergedContextConfiguration@59505b48 testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7c0c77c7, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@433d61fb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5223e5ee, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@70e8f8e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+【xkcoding】2020-03-18 22:30:50.209 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@4b6e2263, started on Wed Mar 18 22:30:41 CST 2020
+【xkcoding】2020-03-18 22:30:50.213 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:30:50.240 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:32:03.596 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 17196 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:32:03.598 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:32:03.600 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:32:03.782 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@1b7c473a
+【xkcoding】2020-03-18 22:32:09.696 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:32:09.734 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:32:09.909 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:32:10.056 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:32:10.093 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:32:10.215 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:32:10.952 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:32:11.074 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 8.649 seconds (JVM running for 11.207)
+【xkcoding】2020-03-18 22:32:11.669 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:32:11.681 INFO  [main] o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@29215f06 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@16132f21, testMethod = test@OrderDetailDaoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@59505b48 testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7c0c77c7, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@433d61fb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5223e5ee, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@70e8f8e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@2cd388f5]; rollback [true]
+【xkcoding】2020-03-18 22:32:12.116 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VALUES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:32:12.460 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==> Parameters: 15845419320582820276(String), 张三(String), 12345678(String), 广东省江门市五邑大学(String), 112345(String), 128.80000000000001136868377216160297393798828125(BigDecimal), 0(Integer), 0(Integer)
+【xkcoding】2020-03-18 22:32:12.471 DEBUG [main] c.j.s.d.O.saveOrderMaster - <==    Updates: 1
+【xkcoding】2020-03-18 22:32:12.477 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==>  Preparing: INSERT INTO order_detail(detail_id, order_id, product_id, product_nameproduct_price, product_quantity, product_icon) VALUES(?, ?, ?, ?, ?, ?, ?) 
+【xkcoding】2020-03-18 22:32:12.479 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==> Parameters: 15845419324756941797(String), 15845419320582820276(String), 123456(String), 奶茶(String), 8(BigDecimal), 3(Integer), http://xxxxx.jpg(String)
+【xkcoding】2020-03-18 22:32:12.510 ERROR [main] druid.sql.Statement - {conn-10005, pstmt-20001} execute error. INSERT INTO order_detail(detail_id, order_id, product_id, product_nameproduct_price, product_quantity, product_icon) VALUES(?, ?, ?, ?, ?, ?, ?)
+java.sql.SQLException: Column count doesn't match value count at row 1
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:129)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:620)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy126.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:47)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:74)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:50)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:117)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:76)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:197)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy85.insert(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.insert(SqlSessionTemplate.java:271)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:62)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy114.saveOrderDetail(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy115.saveOrderDetail(Unknown Source)
+	at com.jay.sell.dao.OrderDetailDaoTest.test(OrderDetailDaoTest.java:39)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+【xkcoding】2020-03-18 22:32:12.729 INFO  [main] o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@29215f06 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@16132f21, testMethod = test@OrderDetailDaoTest, testException = org.springframework.jdbc.BadSqlGrammarException: 
+### Error updating database.  Cause: java.sql.SQLException: Column count doesn't match value count at row 1
+### The error may exist in com/jay/sell/dao/OrderDetailDao.java (best guess)
+### The error may involve com.jay.sell.dao.OrderDetailDao.saveOrderDetail-Inline
+### The error occurred while setting parameters
+### SQL: INSERT INTO order_detail(detail_id, order_id, product_id, product_nameproduct_price, product_quantity, product_icon) VALUES(?, ?, ?, ?, ?, ?, ?)
+### Cause: java.sql.SQLException: Column count doesn't match value count at row 1
+; bad SQL grammar []; nested exception is java.sql.SQLException: Column count doesn't match value count at row 1, mergedContextConfiguration = [WebMergedContextConfiguration@59505b48 testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@7c0c77c7, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@433d61fb, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5223e5ee, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@70e8f8e], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+【xkcoding】2020-03-18 22:32:12.866 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@1b7c473a, started on Wed Mar 18 22:32:03 CST 2020
+【xkcoding】2020-03-18 22:32:12.883 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:32:12.923 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:33:03.203 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 15364 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:33:03.226 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:33:03.229 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:33:03.328 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5e4bd84a
+【xkcoding】2020-03-18 22:33:08.021 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:33:08.065 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:33:08.239 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:33:08.424 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:33:08.459 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:33:08.586 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:33:09.294 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:33:09.431 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 7.522 seconds (JVM running for 9.727)
+【xkcoding】2020-03-18 22:33:10.116 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:33:10.131 INFO  [main] o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@6bd61f98 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@2cd388f5, testMethod = test@OrderDetailDaoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48aca48b testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@433d61fb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@65466a6a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@22a637e7, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@29626d54], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@4640195a]; rollback [true]
+【xkcoding】2020-03-18 22:33:10.509 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VALUES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:33:10.849 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==> Parameters: 15845419904705598845(String), 张三(String), 12345678(String), 广东省江门市五邑大学(String), 112345(String), 128.80000000000001136868377216160297393798828125(BigDecimal), 0(Integer), 0(Integer)
+【xkcoding】2020-03-18 22:33:10.856 DEBUG [main] c.j.s.d.O.saveOrderMaster - <==    Updates: 1
+【xkcoding】2020-03-18 22:33:10.858 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==>  Preparing: INSERT INTO order_detail(detail_id, order_id, product_id, product_name,product_price, product_quantity, product_icon) VALUES(?, ?, ?, ?, ?, ?, ?) 
+【xkcoding】2020-03-18 22:33:10.861 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==> Parameters: 15845419908571545965(String), 15845419904705598845(String), 123456(String), 奶茶(String), 8(BigDecimal), 3(Integer), http://xxxxx.jpg(String)
+【xkcoding】2020-03-18 22:33:10.867 DEBUG [main] c.j.s.d.O.saveOrderDetail - <==    Updates: 1
+【xkcoding】2020-03-18 22:33:10.871 DEBUG [main] c.jay.sell.dao.OrderMasterDao.getOne - ==>  Preparing: SELECT * FROM order_master WHERE order_id=orderId 
+【xkcoding】2020-03-18 22:33:10.931 DEBUG [main] c.jay.sell.dao.OrderMasterDao.getOne - ==> Parameters: 
+【xkcoding】2020-03-18 22:33:10.958 ERROR [main] druid.sql.Statement - {conn-10005, pstmt-20002} execute error. SELECT * FROM order_master WHERE order_id=orderId
+java.sql.SQLSyntaxErrorException: Unknown column 'orderId' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:620)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy126.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy85.selectOne(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy112.getOne(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy113.getOne(Unknown Source)
+	at com.jay.sell.dao.OrderDetailDaoTest.test(OrderDetailDaoTest.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:675)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:125)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:132)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:74)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:104)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:62)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:43)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:35)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:202)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:198)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:69)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:135)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:125)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:135)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:123)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:122)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:80)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:229)
+	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:197)
+	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:211)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:191)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128)
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:69)
+	at com.intellij.rt.execution.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:47)
+	at com.intellij.rt.execution.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:242)
+	at com.intellij.rt.execution.junit.JUnitStarter.main(JUnitStarter.java:70)
+【xkcoding】2020-03-18 22:33:11.232 INFO  [main] o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@6bd61f98 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@2cd388f5, testMethod = test@OrderDetailDaoTest, testException = org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'orderId' in 'where clause'
+### The error may exist in com/jay/sell/dao/OrderMasterDao.java (best guess)
+### The error may involve com.jay.sell.dao.OrderMasterDao.getOne-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM order_master WHERE order_id=orderId
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'orderId' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'orderId' in 'where clause', mergedContextConfiguration = [WebMergedContextConfiguration@48aca48b testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@433d61fb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@65466a6a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@22a637e7, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@29626d54], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+【xkcoding】2020-03-18 22:33:11.264 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@5e4bd84a, started on Wed Mar 18 22:33:03 CST 2020
+【xkcoding】2020-03-18 22:33:11.270 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:33:11.300 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:34:32.982 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 11124 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:34:32.984 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:34:32.986 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:34:33.156 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@5e4bd84a
+【xkcoding】2020-03-18 22:34:37.444 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:34:37.474 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:34:37.635 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:34:37.773 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:34:37.803 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:34:37.895 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:34:38.772 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:34:38.892 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 7.103 seconds (JVM running for 9.227)
+【xkcoding】2020-03-18 22:34:39.455 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:34:39.472 INFO  [main] o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@6bd61f98 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@50b0afd7, testMethod = test@OrderDetailDaoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48aca48b testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@433d61fb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@65466a6a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@22a637e7, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@29626d54], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@468173fa]; rollback [true]
+【xkcoding】2020-03-18 22:34:39.848 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VALUES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:34:40.215 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==> Parameters: 15845420798169782291(String), 张三(String), 12345678(String), 广东省江门市五邑大学(String), 112345(String), 128.80000000000001136868377216160297393798828125(BigDecimal), 0(Integer), 0(Integer)
+【xkcoding】2020-03-18 22:34:40.224 DEBUG [main] c.j.s.d.O.saveOrderMaster - <==    Updates: 1
+【xkcoding】2020-03-18 22:34:40.226 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==>  Preparing: INSERT INTO order_detail(detail_id, order_id, product_id, product_name,product_price, product_quantity, product_icon) VALUES(?, ?, ?, ?, ?, ?, ?) 
+【xkcoding】2020-03-18 22:34:40.228 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==> Parameters: 15845420802252153085(String), 15845420798169782291(String), 123456(String), 奶茶(String), 8(BigDecimal), 3(Integer), http://xxxxx.jpg(String)
+【xkcoding】2020-03-18 22:34:40.233 DEBUG [main] c.j.s.d.O.saveOrderDetail - <==    Updates: 1
+【xkcoding】2020-03-18 22:34:40.237 DEBUG [main] c.jay.sell.dao.OrderMasterDao.getOne - ==>  Preparing: SELECT * FROM order_master WHERE order_id=? 
+【xkcoding】2020-03-18 22:34:40.303 DEBUG [main] c.jay.sell.dao.OrderMasterDao.getOne - ==> Parameters: 15845420798169782291(String)
+【xkcoding】2020-03-18 22:34:40.367 DEBUG [main] c.jay.sell.dao.OrderMasterDao.getOne - <==      Total: 1
+【xkcoding】2020-03-18 22:34:40.375 DEBUG [main] c.jay.sell.dao.OrderDetailDao.getOne - ==>  Preparing: SELECT * FROM order_detail WHERE detail_id = ? 
+【xkcoding】2020-03-18 22:34:40.377 DEBUG [main] c.jay.sell.dao.OrderDetailDao.getOne - ==> Parameters: 15845420802252153085(String)
+【xkcoding】2020-03-18 22:34:40.381 DEBUG [main] c.jay.sell.dao.OrderDetailDao.getOne - <==      Total: 1
+【xkcoding】2020-03-18 22:34:40.382 DEBUG [main] c.j.s.d.O.getAllByOrderId - ==>  Preparing: SELECT * FROM order_detail WHERE order_id = ? 
+【xkcoding】2020-03-18 22:34:40.384 DEBUG [main] c.j.s.d.O.getAllByOrderId - ==> Parameters: 15845420798169782291(String)
+【xkcoding】2020-03-18 22:34:40.385 DEBUG [main] c.j.s.d.O.getAllByOrderId - <==      Total: 1
+【xkcoding】2020-03-18 22:34:40.402 INFO  [main] o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@6bd61f98 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@50b0afd7, testMethod = test@OrderDetailDaoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@48aca48b testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@433d61fb, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@65466a6a, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@22a637e7, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@29626d54], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+【xkcoding】2020-03-18 22:34:40.544 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@5e4bd84a, started on Wed Mar 18 22:34:33 CST 2020
+【xkcoding】2020-03-18 22:34:40.552 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:34:40.604 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-18 22:37:12.245 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Starting OrderDetailDaoTest on DESKTOP-VIOE9O3 with PID 17372 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-18 22:37:12.250 DEBUG [main] com.jay.sell.dao.OrderDetailDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-18 22:37:12.251 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-18 22:37:12.364 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@648c94da
+【xkcoding】2020-03-18 22:37:17.577 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:37:17.618 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:37:17.858 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-18 22:37:18.285 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-18 22:37:18.338 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-18 22:37:18.505 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-18 22:37:19.346 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-18 22:37:19.557 INFO  [main] com.jay.sell.dao.OrderDetailDaoTest - Started OrderDetailDaoTest in 8.648 seconds (JVM running for 11.18)
+【xkcoding】2020-03-18 22:37:20.185 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-18 22:37:20.199 INFO  [main] o.s.t.c.t.TransactionContext - Began transaction (1) for test context [DefaultTestContext@4efac082 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@4640195a, testMethod = test@OrderDetailDaoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6bd61f98 testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5cee5251, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4b14c583, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@69b2283a, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5bd03f44], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]; transaction manager [org.springframework.jdbc.datasource.DataSourceTransactionManager@70d77826]; rollback [true]
+【xkcoding】2020-03-18 22:37:20.572 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==>  Preparing: INSERT INTO order_master(order_id, buyer_name, buyer_phone, buyer_address, buyer_openid, order_amount, order_status, pay_status) VALUES(?, ?, ?, ?,?,?, ?, ?) 
+【xkcoding】2020-03-18 22:37:20.883 DEBUG [main] c.j.s.d.O.saveOrderMaster - ==> Parameters: 15845422405349408201(String), 张三(String), 12345678(String), 广东省江门市五邑大学(String), 112345(String), 128.80000000000001136868377216160297393798828125(BigDecimal), 0(Integer), 0(Integer)
+【xkcoding】2020-03-18 22:37:20.890 DEBUG [main] c.j.s.d.O.saveOrderMaster - <==    Updates: 1
+【xkcoding】2020-03-18 22:37:20.892 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==>  Preparing: INSERT INTO order_detail(detail_id, order_id, product_id, product_name,product_price, product_quantity, product_icon) VALUES(?, ?, ?, ?, ?, ?, ?) 
+【xkcoding】2020-03-18 22:37:20.895 DEBUG [main] c.j.s.d.O.saveOrderDetail - ==> Parameters: 15845422408918211298(String), 15845422405349408201(String), 123456(String), 炸鸡(String), 8(BigDecimal), 3(Integer), http://xxxxx.jpg(String)
+【xkcoding】2020-03-18 22:37:20.896 DEBUG [main] c.j.s.d.O.saveOrderDetail - <==    Updates: 1
+【xkcoding】2020-03-18 22:37:20.900 DEBUG [main] c.jay.sell.dao.OrderMasterDao.getOne - ==>  Preparing: SELECT * FROM order_master WHERE order_id=? 
+【xkcoding】2020-03-18 22:37:20.935 DEBUG [main] c.jay.sell.dao.OrderMasterDao.getOne - ==> Parameters: 15845422405349408201(String)
+【xkcoding】2020-03-18 22:37:20.987 DEBUG [main] c.jay.sell.dao.OrderMasterDao.getOne - <==      Total: 1
+【xkcoding】2020-03-18 22:37:20.989 DEBUG [main] c.jay.sell.dao.OrderDetailDao.getOne - ==>  Preparing: SELECT * FROM order_detail WHERE detail_id = ? 
+【xkcoding】2020-03-18 22:37:20.991 DEBUG [main] c.jay.sell.dao.OrderDetailDao.getOne - ==> Parameters: 15845422408918211298(String)
+【xkcoding】2020-03-18 22:37:20.993 DEBUG [main] c.jay.sell.dao.OrderDetailDao.getOne - <==      Total: 1
+【xkcoding】2020-03-18 22:37:20.994 DEBUG [main] c.j.s.d.O.getAllByOrderId - ==>  Preparing: SELECT * FROM order_detail WHERE order_id = ? 
+【xkcoding】2020-03-18 22:37:20.995 DEBUG [main] c.j.s.d.O.getAllByOrderId - ==> Parameters: 15845422405349408201(String)
+【xkcoding】2020-03-18 22:37:20.997 DEBUG [main] c.j.s.d.O.getAllByOrderId - <==      Total: 1
+【xkcoding】2020-03-18 22:37:21.008 INFO  [main] o.s.t.c.t.TransactionContext - Rolled back transaction for test: [DefaultTestContext@4efac082 testClass = OrderDetailDaoTest, testInstance = com.jay.sell.dao.OrderDetailDaoTest@4640195a, testMethod = test@OrderDetailDaoTest, testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@6bd61f98 testClass = OrderDetailDaoTest, locations = '{}', classes = '{class com.jay.sell.SellApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@5cee5251, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4b14c583, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@69b2283a, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5bd03f44], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.populatedRequestContextHolder' -> true, 'org.springframework.test.context.web.ServletTestExecutionListener.resetRequestContextHolder' -> true]]
+【xkcoding】2020-03-18 22:37:21.027 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@648c94da, started on Wed Mar 18 22:37:12 CST 2020
+【xkcoding】2020-03-18 22:37:21.036 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-18 22:37:21.065 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-03-18 22:43:27.015 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@2a62b5bc
+2020-03-18 22:43:31.839 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-03-18 22:43:31.875 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-03-18 22:43:32.063 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2020-03-18 22:43:32.188 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-03-18 22:43:32.230 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-03-18 22:43:32.348 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2020-03-18 22:43:33.104 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+2020-03-18 22:43:34.325 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2020-03-18 22:43:34.625 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@2a62b5bc, started on Wed Mar 18 22:43:27 CST 2020
+2020-03-18 22:43:34.631 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-03-18 22:43:34.658 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2020-03-18 22:45:48.409 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63787180
+2020-03-18 22:45:53.533 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+2020-03-18 22:45:53.691 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+2020-03-18 22:45:53.820 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+2020-03-18 22:45:53.850 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+2020-03-18 22:45:56.327 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@63787180, started on Wed Mar 18 22:45:48 CST 2020

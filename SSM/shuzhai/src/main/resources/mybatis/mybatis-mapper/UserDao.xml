@@ -41,7 +41,7 @@
         <result property="followNum" column="follow_num"/>
         <result property="goodsNum" column="goods_num"/>
     </resultMap>
-    
+
     <!--        SQL 语句          -->
 
 
@@ -53,7 +53,7 @@
         SELECT user_id FROM user WHERE telephone=#{telephone} AND password=#{password}
     </select>
 
-    <select id="getUserInfo" resultMap="userInfoResultMap" >
+    <select id="getUserInfo" resultMap="userInfoResultMap">
         SELECT * FROM user_info WHERE user_id = #{userId}
     </select>
 
@@ -63,23 +63,23 @@
 
     <insert id="addUser" parameterType="User" useGeneratedKeys="true" keyProperty="userID">
         INSERT INTO user(telephone, password, email, register_time)
-        VALUES(#{telephone}, #{password}, #{email},  #{registerTime})
+        VALUES(#{telephone}, #{password}, #{email}, #{registerTime})
     </insert>
 
     <insert id="addUserInfo" parameterType="UserInfo" useGeneratedKeys="true" keyProperty="id">
         INSERT INTO user_info(user_id, user_name, age, sex, birthday,
-                              intro,  profile_img, balance, region, collection_num,
-                              fans_num, follow_num, goods_num)
+        intro, profile_img, balance, region, collection_num,
+        fans_num, follow_num, goods_num)
         VALUES(#{userId}, #{userName}, #{age}, #{sex}, #{birthday},
-               #{intro}, #{profileImg}, #{balance}, #{region}, #{collectionNum},
-               #{followNum}, #{fansNum}, #{goodsNum})
+        #{intro}, #{profileImg}, #{balance}, #{region}, #{collectionNum},
+        #{followNum}, #{fansNum}, #{goodsNum})
     </insert>
 
     <update id="updateUserInfo" parameterType="UserInfo">
         UPDATE user_info SET user_name=#{userName}, age=#{age},
-                             sex=#{sex} ,intro=#{intro},
-                             region= #{region}
-                             WHERE user_id=#{userId}
+        sex=#{sex} ,intro=#{intro},
+        region= #{region}
+        WHERE user_id=#{userId}
     </update>
 
     <update id="updateUserPic">
@@ -89,8 +89,6 @@
     <update id="updatePassword" parameterType="User">
         UPDATE user SET password=#{password} WHERE user_id=#{userId}
     </update>
-
-
 
 
 </mapper>

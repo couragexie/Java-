@@ -20,9 +20,9 @@
 
     <insert id="addBook" parameterType="Book" useGeneratedKeys="true" keyProperty="bookId">
         insert into book(book_name, category, price, author, book_intro, in_date,
-                         in_selling, adit_status, user_id, like_num, collect, trading_way)
+        in_selling, adit_status, user_id, like_num, collect, trading_way)
         values(#{bookName}, #{category}, #{price}, #{author}, #{bookIntro},
-         #{inDate}, #{inSelling}, #{aditStatus}, #{userId}, #{likeNum}, #{collect}), #{tradingway}
+        #{inDate}, #{inSelling}, #{aditStatus}, #{userId}, #{likeNum}, #{collect}), #{tradingway}
     </insert>
 
     <select id="getPublishedBooksByUserId" resultType="Book">

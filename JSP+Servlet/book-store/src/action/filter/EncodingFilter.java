@@ -1,8 +1,8 @@
 package action.filter;
 /*
-* ¹ıÂËÖĞÎÄ×Ö·û¼¯
-* ĞèÒªÔÚ web.xml ÅäÖÃÏàÓ¦µÄ²Ù×÷
-* */
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
+ * ï¿½ï¿½Òªï¿½ï¿½ web.xml ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä²ï¿½ï¿½ï¿½
+ * */
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -15,14 +15,14 @@ public class EncodingFilter implements Filter {
     }
 
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException, IOException {
-        //System.out.println("¾­¹ı¹ıÂË");
-        // ´¦ÀíÇëÇó×Ö·û
+        //System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½
         request.setCharacterEncoding("UTF-8");
-        // ´«µİ¸øÏÂÒ»¸ö¹ıÂËÆ÷£¬
+        // ï¿½ï¿½ï¿½İ¸ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         response.setCharacterEncoding("UTF-8");
         //response.setContentType("text/html;charset=UTF-8");
         chain.doFilter(request, response);
-        // ´¦ÀíÏìÓ¦×Ö·û¼¯£¬ÈôÏà¹Ø servlet ÒÑÓĞ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ servlet ï¿½ï¿½ï¿½ï¿½
         response.setContentType("text/html;charset=UTF-8");
     }
 

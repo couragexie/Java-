@@ -33,5 +33,5 @@ public interface UserDao {
     int updateUserPic(@Param("profileImg") String profileImg, @Param("userId") Integer userId);
 
     // 删除照片
-   //int deletePic(Integer userId);
+    //int deletePic(Integer userId);
 }

@@ -19,7 +19,7 @@
     </settings>
 
     <typeAliases>
-    <!-- 设置别名，默认为 User       -->
+        <!-- 设置别名，默认为 User       -->
         <typeAlias type="com.shuzhai.domain.User" alias="User"/>
         <typeAlias type="com.shuzhai.domain.UserInfo" alias="UserInfo"/>
         <typeAlias type="com.shuzhai.domain.BookPic" alias="BookPic"/>
@@ -28,7 +28,6 @@
         <typeAlias type="com.shuzhai.domain.BookReview" alias="BookReview"/>
         <typeAlias type="com.shuzhai.domain.Page" alias="Page"/>
     </typeAliases>
-
 
 
 </configuration>

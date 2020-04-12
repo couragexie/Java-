@@ -18,10 +18,10 @@
         <property name="jdbcUrl" value="${jdbc_url}"></property>
         <property name="driverClass" value="${jdbc_driverClass}"></property>
     </bean>
-<!--    &lt;!&ndash; 配置 jdbcTemplate  &ndash;&gt;-->
-<!--    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
-<!--        <property name="dataSource" ref="poolDataSource"></property>-->
-<!--    </bean>-->
+    <!--    &lt;!&ndash; 配置 jdbcTemplate  &ndash;&gt;-->
+    <!--    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">-->
+    <!--        <property name="dataSource" ref="poolDataSource"></property>-->
+    <!--    </bean>-->
     <!--      配置 mybatis   -->
     <bean class="org.mybatis.spring.SqlSessionFactoryBean">
         <!--   配置 mybatis config文件     -->
@@ -34,15 +34,15 @@
 
     <!--  将 dao 接口的实现加入到 ioc 容器中    -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-    <!--  指定 dao 接口的包      -->
+        <!--  指定 dao 接口的包      -->
         <property name="basePackage" value="com.bookstore.dao"></property>
     </bean>
 
 
-<!--    &lt;!&ndash; 消息国际化	&ndash;&gt;-->
-<!--    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">-->
-<!--        &lt;!&ndash; 指定基础名 &ndash;&gt;-->
-<!--        <property name="basename" value="login"></property>-->
-<!--    </bean>-->
+    <!--    &lt;!&ndash; 消息国际化	&ndash;&gt;-->
+    <!--    <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">-->
+    <!--        &lt;!&ndash; 指定基础名 &ndash;&gt;-->
+    <!--        <property name="basename" value="login"></property>-->
+    <!--    </bean>-->
 
 </beans>

@@ -9,7 +9,7 @@ package com.shuzhai.dao;
 
 public class pratice {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         String str1 = "helloWorld";
         String str2 = "helloWorld";
@@ -19,8 +19,8 @@ public class pratice {
 
 
         Integer.parseInt(str1);
-       // for(String s1 : ss )
-            //System.out.println(s1);
+        // for(String s1 : ss )
+        //System.out.println(s1);
         System.out.println(String.join("*", str1, str2));
 
     }

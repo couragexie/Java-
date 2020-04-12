@@ -1,9 +1,10 @@
 package com.bookstore.dao;
 
 import com.bookstore.domain.Book;
+
 import java.util.List;
 
-public interface BookDao{
+public interface BookDao {
 
     Book getBook(Integer id);
 
@@ -14,6 +15,6 @@ public interface BookDao{
     int deleteBook(Integer id);
 
     int updateBook(Book book);
-    
+
     int updateStock(Integer id, Integer stock);
 }

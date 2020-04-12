@@ -16,19 +16,19 @@
 </script>
 
 <script>
-    $(function(){
+    $(function () {
 
-        $("#getUserID").click(function(){
-            alert("点击啦啦啦 + " + $("#telephone").val()+" 密码" +  $("#password").val());
+        $("#getUserID").click(function () {
+            alert("点击啦啦啦 + " + $("#telephone").val() + " 密码" + $("#password").val());
             $.ajax({
-                url:"user/login",
-                method:"GET",
-                dataType:"json",
-                data:{
+                url: "user/login",
+                method: "GET",
+                dataType: "json",
+                data: {
                     "telephone": $("#telephone").val(),
                     "password": $("#password").val()
                 },
-                success:function (rec) {
+                success: function (rec) {
                     alert("收到消息啦");
                     $("#showID").textContent = rec;
                 }
@@ -47,43 +47,38 @@
         //         }
         //     })
 
-        $("#modifiedUser").click(function(){
+        $("#modifiedUser").click(function () {
             var json = {
-                    "username":$("#username").val(),
-                    "age":$("#age").val(),
-                    "sex":$("#sex").val(),
-                    "region":$("#region").val(),
-                    "intro":$("#intro").val()
-                };
+                "username": $("#username").val(),
+                "age": $("#age").val(),
+                "sex": $("#sex").val(),
+                "region": $("#region").val(),
+                "intro": $("#intro").val()
+            };
             var jsonStr = JSON.stringify(json);
             alert(jsonStr);
             $.ajax({
-              url:"userinfos/userinfo/modified",
-              type:"POST",
-              dataType:"json",
-              contentType:"application/json",
-              data:{
-                  "userid":"1",
-                  "userInfo":json
-              },
-              success:function(rec){
+                url: "userinfos/userinfo/modified",
+                type: "POST",
+                dataType: "json",
+                contentType: "application/json",
+                data: {
+                    "userid": "1",
+                    "userInfo": json
+                },
+                success: function (rec) {
 
-                  console.log(rec);
-              }
+                    console.log(rec);
+                }
             })
 
         })
 
 
-
     })
 
 
-
 </script>
-
-
-
 
 
 <%--<h3>用户登录测试模块</h3>--%>
@@ -125,14 +120,12 @@
 <input type="button" id="modifiedUser"/>
 
 
-
-
 <h3>用户上传图片</h3>
 <form action="${pageContext.request.contextPath}/userinfo/picture" method="POST" enctype="multipart/form-data">
     <input name="_method" value="put"/>
     <input type="hidden" name="userId" value="1">
     <input type="file" name="userPicture"/>
-    <input type="submit" />
+    <input type="submit"/>
 </form>
 </body>
 </html>

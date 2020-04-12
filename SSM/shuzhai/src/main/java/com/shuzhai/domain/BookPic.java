@@ -12,9 +12,10 @@ public class BookPic {
 
     private String picPath;  // 图片存储路径
 
-    public BookPic(){}
+    public BookPic() {
+    }
 
-    public BookPic(int bookId,  int isMainPic, int picStatus, String picPath) {
+    public BookPic(int bookId, int isMainPic, int picStatus, String picPath) {
         this.bookId = bookId;
         this.isMainPic = isMainPic;
         this.picStatus = picStatus;

@@ -1,54 +1,54 @@
 p, input, label, select, button {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 html {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-	font-style: sans-serif;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-style: sans-serif;
 }
 
 body {
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	background: #00FFCC url(images/login.jpg);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: #00FFCC url(images/login.jpg);
 }
 
 #login {
-	width: 400px;
-	margin: 100px auto;
-	/*	color:red;
- 	border:1px solid #F00; */
-	background-color: #666666;
-	padding: 10px 0;
+    width: 400px;
+    margin: 100px auto;
+    /*	color:red;
+     border:1px solid #F00; */
+    background-color: #666666;
+    padding: 10px 0;
 }
 
 h1 {
-	padding: 20px 0px 0 0;
-	text-align: center;
-	color: #FFFF00;
+    padding: 20px 0px 0 0;
+    text-align: center;
+    color: #FFFF00;
 }
 
 label {
-	color: #FFFF00;
+    color: #FFFF00;
 }
 
 .input {
-	border: 0px;
-	width: 100%;
-	border-radius: 3px;
-	padding: 5px;
+    border: 0px;
+    width: 100%;
+    border-radius: 3px;
+    padding: 5px;
 }
 
 button {
-	width: 100%;
-	border: 0;
-	border-radius: 5px;
-	padding: 5px;
+    width: 100%;
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 p {
-	padding: 0px 30px 5px 30px;
+    padding: 0px 30px 5px 30px;
 }

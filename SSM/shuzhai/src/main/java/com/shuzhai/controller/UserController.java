@@ -22,52 +22,51 @@ public class UserController {
     @Autowired
     UserServiceImp userService;
 
-    /** Log4j日志处理(@author: jay) */
+    /**
+     * Log4j日志处理(@author: jay)
+     */
     private static final Logger log = Logger.getLogger(UserController.class);
 
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public Response register(@RequestBody User user){
+    public Response register(@RequestBody User user) {
         System.out.println(user);
         boolean ok = userService.addUser(user);
-        if(!ok)
+        if (!ok)
             return new Response().failure();
         return new Response().success();
     }
 
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Response  login(@RequestBody  User user/*, HttpServletResponse response**/){
+    public Response login(@RequestBody User user/*, HttpServletResponse response**/) {
         System.out.println("登录用户:" + user);
         Map<String, Object> data = new HashMap<>();
 
         Integer id;
-        id  = userService.checkUserByTelAndPassword(user);
-        if(id == -1) {
+        id = userService.checkUserByTelAndPassword(user);
+        if (id == -1) {
             return new Response().failure();
-        }else{
+        } else {
             data.put("userID", id);
             return new Response().success(data);
         }
     }
 
     /**
-     *
      * @Author: jay
      * @Description: 修改密码
      * @Date 2019/10/12 11:41
-     *
      **/
 
     @RequestMapping(value = "/modified", method = RequestMethod.PUT)
     public Response modified(@RequestBody User user,
-                           @RequestParam("newPassword")String newPassword){
+                             @RequestParam("newPassword") String newPassword) {
         System.out.println(user + "   " + newPassword);
-        if(!userService.modifiedPassowrd(user, newPassword))
+        if (!userService.modifiedPassowrd(user, newPassword))
             return new Response().failure();
         return new Response().success();
     }
-
 
 
 }

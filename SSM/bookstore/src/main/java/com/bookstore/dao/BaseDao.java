@@ -9,12 +9,12 @@ import java.lang.reflect.ParameterizedType;
 import java.util.List;
 
 public class BaseDao<T> {
-   // @Autowired
+    // @Autowired
     protected JdbcTemplate jdbcTemplate;
 
     private Class<T> type;
 
-    public BaseDao(){
+    public BaseDao() {
         // 子类继承BaseDao
         // 获取子类类型，获取到父类的类型
         ParameterizedType genericSuperclass = (ParameterizedType) this
@@ -22,8 +22,9 @@ public class BaseDao<T> {
         // genericSuperclass.getActualTypeArguments获取真实的参数类型
         type = (Class<T>) genericSuperclass.getActualTypeArguments()[0];
     }
+
     // 获取一条数据
-    public T get(String sql, Object... params){
+    public T get(String sql, Object... params) {
         T object = null;
         try {
             object = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(type), params);
@@ -31,12 +32,14 @@ public class BaseDao<T> {
         }
         return object;
     }
+
     // 获取一组数据
-    public List<T> getList(String sql, Object... params){
-        return  jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(type), params);
+    public List<T> getList(String sql, Object... params) {
+        return jdbcTemplate.query(sql, new BeanPropertyRowMapper<>(type), params);
     }
+
     // 更新数据，// 更新不成功返回0，成功返回1
-    public int update(String sql, Object...params){
+    public int update(String sql, Object... params) {
         return jdbcTemplate.update(sql, params);
     }
 

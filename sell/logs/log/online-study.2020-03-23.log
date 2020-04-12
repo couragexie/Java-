@@ -1,0 +1,60 @@
+2020-03-23 00:04:20.889 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+2020-03-23 00:04:20.900 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+2020-03-23 00:04:21.080 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-03-23 00:04:21.081 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResultVO(code=0, message=成功, data=[ProductVO(CategoryName=热销, CategoryType=2, productInfoVO=[Product (truncated)...]
+2020-03-23 00:04:21.125 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-23 00:08:52.121 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - GET "/sell/api/seller.json", parameters={}
+2020-03-23 00:08:52.132 DEBUG [http-nio-8080-exec-3] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-23 00:08:52.140 DEBUG [http-nio-8080-exec-3] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2020-03-23 00:08:52.140 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-23 00:08:52.152 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/sell/error", parameters={}
+2020-03-23 00:08:52.156 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-23 00:08:52.188 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-03-23 00:08:52.188 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Mon Mar 23 00:08:52 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-23 00:08:52.188 DEBUG [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+2020-03-23 00:08:52.190 DEBUG [http-nio-8080-exec-4] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+2020-03-23 00:08:52.205 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-23 00:08:52.219 DEBUG [http-nio-8080-exec-4] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-03-23 00:08:52.220 DEBUG [http-nio-8080-exec-4] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResultVO(code=0, message=成功, data=[ProductVO(CategoryName=热销, CategoryType=2, productInfoVO=[Product (truncated)...]
+2020-03-23 00:08:52.222 DEBUG [http-nio-8080-exec-4] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-23 00:08:52.428 DEBUG [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet - GET "/sell/wechat/authorize?returnUrl=http%3A%2F%2Fsell.com%2F%23%2F", parameters={masked}
+2020-03-23 00:08:52.430 DEBUG [http-nio-8080-exec-5] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.WeChatController#authorize(String)
+2020-03-23 00:08:52.460 DEBUG [http-nio-8080-exec-5] o.s.web.servlet.view.RedirectView - View name 'redirect:https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9253f047e4a41320&redirect_uri=http%3A%2F%2Fsellc.nat300.top%2Fsell%2Fwechat%2FuserInfo&response_type=code&scope=snsapi_base&state=http%3A%2F%2Fsell.com%2F%23%2F&connect_redirect=1#wechat_redirect', model {}
+2020-03-23 00:08:52.462 DEBUG [http-nio-8080-exec-5] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-23 00:09:22.715 DEBUG [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet - GET "/sell/api/seller.json", parameters={}
+2020-03-23 00:09:22.719 DEBUG [http-nio-8080-exec-6] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-23 00:09:22.724 DEBUG [http-nio-8080-exec-6] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2020-03-23 00:09:22.725 DEBUG [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-23 00:09:22.725 DEBUG [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/sell/error", parameters={}
+2020-03-23 00:09:22.726 DEBUG [http-nio-8080-exec-6] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-23 00:09:22.727 DEBUG [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-03-23 00:09:22.728 DEBUG [http-nio-8080-exec-6] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Mon Mar 23 00:09:22 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-23 00:09:22.730 DEBUG [http-nio-8080-exec-6] o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-23 00:09:39.330 DEBUG [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet - GET "/sell/api/seller.json", parameters={}
+2020-03-23 00:09:39.331 DEBUG [http-nio-8080-exec-7] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-23 00:09:39.332 DEBUG [http-nio-8080-exec-7] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2020-03-23 00:09:39.332 DEBUG [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-23 00:09:39.333 DEBUG [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/sell/error", parameters={}
+2020-03-23 00:09:39.334 DEBUG [http-nio-8080-exec-7] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-23 00:09:39.335 DEBUG [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-03-23 00:09:39.335 DEBUG [http-nio-8080-exec-7] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Mon Mar 23 00:09:39 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-23 00:09:39.336 DEBUG [http-nio-8080-exec-7] o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-23 00:09:39.367 DEBUG [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+2020-03-23 00:09:39.373 DEBUG [http-nio-8080-exec-8] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+2020-03-23 00:09:39.383 DEBUG [http-nio-8080-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-03-23 00:09:39.384 DEBUG [http-nio-8080-exec-8] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResultVO(code=0, message=成功, data=[ProductVO(CategoryName=热销, CategoryType=2, productInfoVO=[Product (truncated)...]
+2020-03-23 00:09:39.385 DEBUG [http-nio-8080-exec-8] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+2020-03-23 00:10:17.818 DEBUG [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet - GET "/sell/api/seller.json", parameters={}
+2020-03-23 00:10:17.819 DEBUG [http-nio-8080-exec-10] o.s.w.s.h.SimpleUrlHandlerMapping - Mapped to ResourceHttpRequestHandler ["classpath:/META-INF/resources/", "classpath:/resources/", "classpath:/static/", "classpath:/public/", "/"]
+2020-03-23 00:10:17.824 DEBUG [http-nio-8080-exec-10] o.s.w.s.r.ResourceHttpRequestHandler - Resource not found
+2020-03-23 00:10:17.825 DEBUG [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet - Completed 404 NOT_FOUND
+2020-03-23 00:10:17.827 DEBUG [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/sell/error", parameters={}
+2020-03-23 00:10:17.828 DEBUG [http-nio-8080-exec-10] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#error(HttpServletRequest)
+2020-03-23 00:10:17.829 DEBUG [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-03-23 00:10:17.829 DEBUG [http-nio-8080-exec-10] o.s.w.s.m.m.a.HttpEntityMethodProcessor - Writing [{timestamp=Mon Mar 23 00:10:17 CST 2020, status=404, error=Not Found, message=No message available,  (truncated)...]
+2020-03-23 00:10:17.830 DEBUG [http-nio-8080-exec-10] o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 404
+2020-03-23 00:10:17.847 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+2020-03-23 00:10:17.848 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+2020-03-23 00:10:17.859 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json', given [application/json, text/plain, */*] and supported [application/json, application/*+json, application/json, application/*+json]
+2020-03-23 00:10:17.860 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResultVO(code=0, message=成功, data=[ProductVO(CategoryName=热销, CategoryType=2, productInfoVO=[Product (truncated)...]
+2020-03-23 00:10:17.861 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 200 OK

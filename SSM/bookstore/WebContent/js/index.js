@@ -3,20 +3,20 @@
 // 打开记事本，将复制的 js 内容，粘贴在新创建的文件，并保存为 UTF-8 的格式，然后再复制记事本文件的内容。然后将内容重新
 // 复制粘贴在修改后的 js 文件中；
 
-$(function(){
+$(function () {
 
     // 退出登录 按钮的 ajax 请求，
-    $("#log_out").click(function(){
+    $("#log_out").click(function () {
         $.ajax({
-            url:"loginOut",
-            method:"GET",
-            data:{},
-            success:function(res) {
+            url: "loginOut",
+            method: "GET",
+            data: {},
+            success: function (res) {
                 console.log(res);
                 alert("退出成功")
 
-                 //刷新页面
-                if(res == 200)
+                //刷新页面
+                if (res == 200)
                     window.location.reload();
             }
         })
@@ -24,22 +24,21 @@ $(function(){
     });
 
 
-
     // 分别为 8 个图书分类导航添加 ajax 请求数据
     // 1：计算机， 2：文学， 3：传记， 4： 经管， 5：成功励志
     // 6：历史， 7：宗教哲学， 8：生活。
     // 以此分类，后端同样采用此数字分别来为图书分类
 
-    $("#computer").click(function(){
+    $("#computer").click(function () {
         $.ajax({
-            url:"book",
-            method:"GET",
+            url: "book",
+            method: "GET",
             dataType: "json",
-            data:{"classifyID":"1"},
-            success:function(res){
+            data: {"classifyID": "1"},
+            success: function (res) {
                 // 将后端返回的 json 字符串转换为 json 对象
                 // 同样可以采用 JSON.parse() 来转换为 JSON 对象
-            	var json = eval(res);
+                var json = eval(res);
                 //var books = new Array();
                 var books = json.books;
                 showBook(books);
@@ -50,13 +49,13 @@ $(function(){
         return false;
     });
 
-    $("#literature").click(function(){
+    $("#literature").click(function () {
         $.ajax({
-            url:"book",
-            method:"GET",
-            dataType:"json",
-            data:{"classifyID":"2"},
-            success:function(res){
+            url: "book",
+            method: "GET",
+            dataType: "json",
+            data: {"classifyID": "2"},
+            success: function (res) {
                 var json = eval(res);
                 var books = new Array();
                 books = json.books;
@@ -68,31 +67,13 @@ $(function(){
         return false;
     });
 
-    $("#memoirist").click(function(){
-       $.ajax({
-          url:"book",
-          method:"GET",
-          dataType:"json",
-          data:{"classifyID":"3"},
-          success:function(res){
-              var json = eval(res);
-              var books = new Array();
-              books = json.books;
-              showBook(books);
-
-          }
-
-       });
-       return false;
-    });
-
-    $("#ec_ma").click(function(){
+    $("#memoirist").click(function () {
         $.ajax({
-            url:"book",
-            method:"GET",
-            dataType:"json",
-            data:{"classifyID":"4"},
-            success:function(res){
+            url: "book",
+            method: "GET",
+            dataType: "json",
+            data: {"classifyID": "3"},
+            success: function (res) {
                 var json = eval(res);
                 var books = new Array();
                 books = json.books;
@@ -104,13 +85,13 @@ $(function(){
         return false;
     });
 
-    $("#success").click(function(){
+    $("#ec_ma").click(function () {
         $.ajax({
-            url:"book",
-            method:"GET",
-            dataType:"json",
-            data:{"classifyID":"5"},
-            success:function(res){
+            url: "book",
+            method: "GET",
+            dataType: "json",
+            data: {"classifyID": "4"},
+            success: function (res) {
                 var json = eval(res);
                 var books = new Array();
                 books = json.books;
@@ -121,13 +102,14 @@ $(function(){
         });
         return false;
     });
-    $("#history").click(function(){
+
+    $("#success").click(function () {
         $.ajax({
-            url:"book",
-            method:"GET",
-            dataType:"json",
-            data:{"classifyID":"6"},
-            success:function(res){
+            url: "book",
+            method: "GET",
+            dataType: "json",
+            data: {"classifyID": "5"},
+            success: function (res) {
                 var json = eval(res);
                 var books = new Array();
                 books = json.books;
@@ -138,13 +120,13 @@ $(function(){
         });
         return false;
     });
-    $("#religion").click(function(){
+    $("#history").click(function () {
         $.ajax({
-            url:"book",
-            method:"GET",
-            dataType:"json",
-            data:{"classifyID":"7"},
-            success:function(res){
+            url: "book",
+            method: "GET",
+            dataType: "json",
+            data: {"classifyID": "6"},
+            success: function (res) {
                 var json = eval(res);
                 var books = new Array();
                 books = json.books;
@@ -155,13 +137,30 @@ $(function(){
         });
         return false;
     });
-    $("#life").click(function(){
+    $("#religion").click(function () {
         $.ajax({
-            url:"book",
-            method:"GET",
-            dataType:"json",
-            data:{"classifyID":"8"},
-            success:function(res){
+            url: "book",
+            method: "GET",
+            dataType: "json",
+            data: {"classifyID": "7"},
+            success: function (res) {
+                var json = eval(res);
+                var books = new Array();
+                books = json.books;
+                showBook(books);
+
+            }
+
+        });
+        return false;
+    });
+    $("#life").click(function () {
+        $.ajax({
+            url: "book",
+            method: "GET",
+            dataType: "json",
+            data: {"classifyID": "8"},
+            success: function (res) {
                 var json = eval(res);
                 var books = new Array();
                 books = json.books;
@@ -170,37 +169,34 @@ $(function(){
         });
         return false;
     });
-
-
 
 
 })
 
 
 // 获取并展示图书
-function showBook(books){
+function showBook(books) {
 
     var ul = document.querySelector('.shop-list');
 
     var str = "";
     // 利用此方法往 ul 中插入下面内容，比较方便快捷
     // innerHTML 会覆盖 ul 中的所有内容
-    for(var i = 0; i < books.length; i ++)
-    {
-    	var book = books[i];
+    for (var i = 0; i < books.length; i++) {
+        var book = books[i];
         str += '<li>' +
-            '<a class="book-img"><img src="http://localhost:8080/img/' + book.imgName +'"></a> ' +
+            '<a class="book-img"><img src="http://localhost:8080/img/' + book.imgName + '"></a> ' +
             '<div class="book-info">' +
             '<label>书名：</label>' +
-            '<a href="#" class="book-n"> '+book.bookName+ '</a><br>' +
-            '<label>￥</label>'+ 
-            '<span class="money">'+ book.price +'</span><br>'+
+            '<a href="#" class="book-n"> ' + book.bookName + '</a><br>' +
+            '<label>￥</label>' +
+            '<span class="money">' + book.price + '</span><br>' +
             '<label>作者：</label>' +
-            '<span class="author">'+ book.author+'</span><br>' +
+            '<span class="author">' + book.author + '</span><br>' +
             '<label>出版社：</label>' +
-            '<span class="press">'+ book.press +'</span><br>' +
+            '<span class="press">' + book.press + '</span><br>' +
             '<label>简介</label>' +
-            '<p class="intro">'+ book.intro +'</p>' +
+            '<p class="intro">' + book.intro + '</p>' +
             '</div>' +
             '<div class="purchase">' +
             '<a class="add-shopping">加入购物车</a>' +

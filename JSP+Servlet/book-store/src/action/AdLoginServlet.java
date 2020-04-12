@@ -1,9 +1,9 @@
 package action;
 /*
-* ´¦Àí¹ÜÀíÔ±ÑéÖ¤µÇÂ¼
-* ±¾À´¿ÉÒÔºÍ LoginServlet ºÏ³ÉÍ¬Ò»¸öÀà£¬Ö»ÊÇ²»ÖªµÀÈçºÎÑéÖ¤ÊÇÆÕÍ¨ÓÃ»§µÄform±íµ¥
-* »òÕßÊÇ¹ÜÀíÔ±µÄ form ±íµ¥£¬ËùÒÔÓÃÁËÁ½¸öÀàÀ´´¦Àí
-* */
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Ö¤ï¿½ï¿½Â¼
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôºï¿½ LoginServlet ï¿½Ï³ï¿½Í¬Ò»ï¿½ï¿½ï¿½à£¬Ö»ï¿½Ç²ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½formï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ç¹ï¿½ï¿½ï¿½Ô±ï¿½ï¿½ form ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * */
 
 
 import Util.DBConnection;
@@ -22,15 +22,15 @@ import java.sql.ResultSet;
 @WebServlet("/AdLoginServlet")
 public class AdLoginServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // ´¦ÀíÖÐÎÄÂÒÂëÎÊÌâ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //        response.setContentType("text/plain; charset=UTF-8");
 //        request.setCharacterEncoding("UTF-8");
 //        response.setCharacterEncoding("UTF-8");
 
         String action = request.getParameter("action");
-        if(action == null){
+        if (action == null) {
             login(request, response);
-        }else{
+        } else {
             logout(request, response);
         }
 
@@ -48,7 +48,7 @@ public class AdLoginServlet extends HttpServlet {
         doPost(request, response);
     }
 
-    private void login(HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException{
+    private void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         Connection con;
@@ -57,28 +57,27 @@ public class AdLoginServlet extends HttpServlet {
         con = DBConnection.connectDB();
         String sql = "SELECT * FROM administrator WHERE username=?";
 
-        try{
+        try {
             preSt = con.prepareStatement(sql);
-            preSt.setString(1,username);
+            preSt.setString(1, username);
             rs = preSt.executeQuery();
 
-            if(rs.next()){
-                if(rs.getString(2).equals(password)) {
-                    request.getSession().setAttribute("adUsername",username);
+            if (rs.next()) {
+                if (rs.getString(2).equals(password)) {
+                    request.getSession().setAttribute("adUsername", username);
                     response.sendRedirect("backIndex.jsp");
                 }
             }
 
-            request.setAttribute("msg", "µÇÂ¼Ê§°Ü£¬ÃÜÂë»òÕËºÅ´íÎó!");
-            request.getRequestDispatcher("backLogin.jsp").forward(request,response);
+            request.setAttribute("msg", "ï¿½ï¿½Â¼Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËºÅ´ï¿½ï¿½ï¿½!");
+            request.getRequestDispatcher("backLogin.jsp").forward(request, response);
 
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
 
 
     }
-
 
 
 }

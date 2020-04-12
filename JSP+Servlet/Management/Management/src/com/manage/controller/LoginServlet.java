@@ -25,128 +25,128 @@ import com.manage.domain.Teacher;
  */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
     /**
-     * Default constructor. 
+     * Default constructor.
      */
     public LoginServlet() {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		doPost(request, response);
-	}
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        //response.getWriter().append("Served at: ").append(request.getContextPath());
+        doPost(request, response);
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("UTF-8");
-		String action = request.getParameter("action");
-		
-		String path = request.getContextPath();
-		
-		//System.out.println("action:" + action);
-		
-		if("login".equals(action)) {
-			login(request, response);
-		}else {
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+        String action = request.getParameter("action");
 
-			HttpSession session = request.getSession();
-			session.invalidate();
-			response.sendRedirect(path + "/login.jsp");
-			
-		}
-			
-	}
-	
-	public void login(HttpServletRequest request, HttpServletResponse response)throws ServletException, IOException {
-		String path = request.getContextPath();
-		HttpSession session = request.getSession();
-		
-		String inumber = request.getParameter("inumber");
-		String password = request.getParameter("password");
-		String identity = request.getParameter("identity");
-		System.out.println("identity:" + identity);
-		
-		if(identity.equals("student")) {
-			// Èç¹ûµÇÂ¼µÄÊÇÑ§Éú
-			StudentDao studentDao = new StudentDao();
-			Student student = new Student();
-			try {
-				student.setsId(inumber);
-			} catch (Exception ex) {
-				session.setAttribute("msg", "ÕËºÅÃÜÂë´íÎó£¬ÇëÖØÐÂµÇÂ¼£¡");
-				session.setAttribute("path", "login.jsp");
-				response.sendRedirect(path + "/information.jsp");
-				return ;
-			}
-			student.setPassword(password);
-			
-			System.out.println(student);
-			
-			if (studentDao.isValid(student)) {
-				// ÕËºÅÃÜÂëºÏ·¨
-				session.setAttribute("student", student);
-				session.setAttribute("sName", student.getName());
-				// Ñ§ÉúÐÅÏ¢
-				StudentInfo studentInfo = new StudentInfo();
-				studentInfo.setsId(student.getsId());
-				studentDao.getStudentInfo(studentInfo);
-				session.setAttribute("studentInfo", studentInfo);
-				// Ñ§ÉúÑ¡¿ÎÐÅÏ¢
-				session.setAttribute("StudentCourses", getStudentCourse(student.getsId()));
-				// Ìí¼ÓÑ¡¿ÎµÄÐÅÏ¢
-				session.setAttribute("chooseCourse", getChooseCourse(student.getsId()));
-				
-				response.sendRedirect(path + "/StudentIndex.jsp");
-			} else {
-				// ²»ºÏ·¨
-				session.setAttribute("msg", "ÕËºÅÃÜÂë´íÎó£¬ÇëÖØÐÂµÇÂ¼£¡");
-				session.setAttribute("path", "login.jsp");
-				response.sendRedirect(path + "/information.jsp");
-			}
-			
-		}else if(identity.equals("teacher")){
-			StudentDao sDao = new StudentDao();
-			TeacherDao tDao = new TeacherDao();
-			CourseDao cDao = new CourseDao();
-			Teacher teacher = new Teacher();
-			teacher.setTid(request.getParameter("inumber"));
-			teacher.setPassword(request.getParameter("password"));
-			
-			boolean ok = tDao.inVaild(teacher);
-			System.out.println(teacher);
-			
-			if(ok) {
-				//session.setAttribute("tName", teacher.getName());
-				session.setAttribute("teacher", teacher);
-				session.setAttribute("courses", cDao.getAllCourse());
-				session.setAttribute("students", sDao.getAllStudent());
-				session.setAttribute("studentCourse", cDao.getAllStudentCourse());
-				response.sendRedirect("TeacherIndex.jsp");
-			}else {
-				session.setAttribute("msg", "µÇÂ¼Ê§°Ü£¡");
-				session.setAttribute("path", "login.jsp");
-				response.sendRedirect(path + "/information.jsp");
-			}
-		}	
-	}
-	
-	
-	private List<StudentCourse> getStudentCourse(String sid){
-		CourseDao cDao = new CourseDao();
-		return cDao.getCourseBySid(sid);
-	}
-	
-	private List<Course> getChooseCourse(String sid){
-		CourseDao cDao = new CourseDao();
-		return  cDao.getChooseCourse(sid);
-	}
+        String path = request.getContextPath();
+
+        //System.out.println("action:" + action);
+
+        if ("login".equals(action)) {
+            login(request, response);
+        } else {
+
+            HttpSession session = request.getSession();
+            session.invalidate();
+            response.sendRedirect(path + "/login.jsp");
+
+        }
+
+    }
+
+    public void login(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String path = request.getContextPath();
+        HttpSession session = request.getSession();
+
+        String inumber = request.getParameter("inumber");
+        String password = request.getParameter("password");
+        String identity = request.getParameter("identity");
+        System.out.println("identity:" + identity);
+
+        if (identity.equals("student")) {
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½Ñ§ï¿½ï¿½
+            StudentDao studentDao = new StudentDao();
+            Student student = new Student();
+            try {
+                student.setsId(inumber);
+            } catch (Exception ex) {
+                session.setAttribute("msg", "ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½Â¼ï¿½ï¿½");
+                session.setAttribute("path", "login.jsp");
+                response.sendRedirect(path + "/information.jsp");
+                return;
+            }
+            student.setPassword(password);
+
+            System.out.println(student);
+
+            if (studentDao.isValid(student)) {
+                // ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½
+                session.setAttribute("student", student);
+                session.setAttribute("sName", student.getName());
+                // Ñ§ï¿½ï¿½ï¿½ï¿½Ï¢
+                StudentInfo studentInfo = new StudentInfo();
+                studentInfo.setsId(student.getsId());
+                studentDao.getStudentInfo(studentInfo);
+                session.setAttribute("studentInfo", studentInfo);
+                // Ñ§ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ï¢
+                session.setAttribute("StudentCourses", getStudentCourse(student.getsId()));
+                // ï¿½ï¿½ï¿½Ñ¡ï¿½Îµï¿½ï¿½ï¿½Ï¢
+                session.setAttribute("chooseCourse", getChooseCourse(student.getsId()));
+
+                response.sendRedirect(path + "/StudentIndex.jsp");
+            } else {
+                // ï¿½ï¿½ï¿½Ï·ï¿½
+                session.setAttribute("msg", "ï¿½Ëºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Âµï¿½Â¼ï¿½ï¿½");
+                session.setAttribute("path", "login.jsp");
+                response.sendRedirect(path + "/information.jsp");
+            }
+
+        } else if (identity.equals("teacher")) {
+            StudentDao sDao = new StudentDao();
+            TeacherDao tDao = new TeacherDao();
+            CourseDao cDao = new CourseDao();
+            Teacher teacher = new Teacher();
+            teacher.setTid(request.getParameter("inumber"));
+            teacher.setPassword(request.getParameter("password"));
+
+            boolean ok = tDao.inVaild(teacher);
+            System.out.println(teacher);
+
+            if (ok) {
+                //session.setAttribute("tName", teacher.getName());
+                session.setAttribute("teacher", teacher);
+                session.setAttribute("courses", cDao.getAllCourse());
+                session.setAttribute("students", sDao.getAllStudent());
+                session.setAttribute("studentCourse", cDao.getAllStudentCourse());
+                response.sendRedirect("TeacherIndex.jsp");
+            } else {
+                session.setAttribute("msg", "ï¿½ï¿½Â¼Ê§ï¿½Ü£ï¿½");
+                session.setAttribute("path", "login.jsp");
+                response.sendRedirect(path + "/information.jsp");
+            }
+        }
+    }
+
+
+    private List<StudentCourse> getStudentCourse(String sid) {
+        CourseDao cDao = new CourseDao();
+        return cDao.getCourseBySid(sid);
+    }
+
+    private List<Course> getChooseCourse(String sid) {
+        CourseDao cDao = new CourseDao();
+        return cDao.getChooseCourse(sid);
+    }
 }

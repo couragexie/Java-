@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.sql.DriverManager"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
-<fullyQualifiedTypeName name="com.manage.dao.StudentDao"/>
-<fullyQualifiedTypeName name="com.manage.domain.Student"/>
-<fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
-<fullyQualifiedTypeName name="java.sql.Connection"/>
-<fullyQualifiedTypeName name="java.sql.ResultSet"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.sql.Statement"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
-<fullyQualifiedTypeName name="com.manage.util.DBUtil"/>
-<fullyQualifiedTypeName name="com.manage.dao.TeacherDao"/>
-<fullyQualifiedTypeName name="com.manage.domain.Teacher"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="com.manage.domain.StudentInfo"/>
-<fullyQualifiedTypeName name="com.manage.domain.Course"/>
-<fullyQualifiedTypeName name="com.manage.dao.CourseDao"/>
-<fullyQualifiedTypeName name="com.manage.domain.StudentCourse"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="com.manage.dao.StudentDao"/>
+    <fullyQualifiedTypeName name="com.manage.domain.Student"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.sql.Statement"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+    <fullyQualifiedTypeName name="com.manage.util.DBUtil"/>
+    <fullyQualifiedTypeName name="com.manage.dao.TeacherDao"/>
+    <fullyQualifiedTypeName name="com.manage.domain.Teacher"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="com.manage.domain.StudentInfo"/>
+    <fullyQualifiedTypeName name="com.manage.domain.Course"/>
+    <fullyQualifiedTypeName name="com.manage.dao.CourseDao"/>
+    <fullyQualifiedTypeName name="com.manage.domain.StudentCourse"/>
 </qualifiedTypeNameHistroy>

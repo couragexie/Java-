@@ -1,70 +1,74 @@
-body{
+body {
     background-color: #e9ecef;
 }
 
 
 .input {
-    width:300px;
-    height:36px;
-    margin:0 auto;
-    
+    width: 300px;
+    height: 36px;
+    margin: 0 auto;
+
 }
-.container{
+
+.container {
     text-align: center;
 }
 
 
-.login{
+.login {
     /* text-align: center; */
     position: relative;
 }
-.login .login-box{
+
+.login .login-box {
     position: relative;
-    width:300px;
-    height:300px;
-    margin:0 auto;
-   /* / text-align: center; */
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    /* / text-align: center; */
     line-height: 50px;
     /* top:200px; */
-    margin-top:130px;
+    margin-top: 130px;
 }
-.login .login-box .words{
+
+.login .login-box .words {
     font-size: 18px;
     font-weight: bold;
-    margin:0;
-    margin-left:92px;
+    margin: 0;
+    margin-left: 92px;
 }
 
-.login .login-box .logo{
-  
-    margin:0 auto;
+.login .login-box .logo {
+
+    margin: 0 auto;
 }
 
-.login .login-box .logo img{
-     width:120px;
-    height:120px;
+.login .login-box .logo img {
+    width: 120px;
+    height: 120px;
     position: relative;
-    left:85px;
-    margin:0;
-   
+    left: 85px;
+    margin: 0;
+
 }
 
-.login .login-box .checkbox{
-    width:200px;
+.login .login-box .checkbox {
+    width: 200px;
     /* height:30px; */
     text-align: center;
     margin: 0 auto;
     line-height: 20px;
 }
 
-.login .login-box .btn{
-    width:300px;
-    height:36px;
+.login .login-box .btn {
+    width: 300px;
+    height: 36px;
     background-color: #007bff;
-    border:1px solid #007bff;
-   /* position: absolute; */
-   /* left:20px; */
+    border: 1px solid #007bff;
+    /* position: absolute; */
+    /* left:20px; */
 }
-.login .login-box button.btn:hover{
-    background-color:#0069d9;
+
+.login .login-box button.btn:hover {
+    background-color: #0069d9;
 }

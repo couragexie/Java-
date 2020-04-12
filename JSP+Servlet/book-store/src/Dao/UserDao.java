@@ -8,96 +8,99 @@ import Domain.User;
 import Util.DBConnection;
 
 /**
- * @author xj138 ²Ù×÷ÓÃ»§Êý¾Ý£¬½øÐÐµÇÂ¼»ò×¢²á
+ * @author xj138 ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ý£ï¿½ï¿½ï¿½ï¿½Ðµï¿½Â¼ï¿½ï¿½×¢ï¿½ï¿½
  */
 public class UserDao {
-	private User user;
+    private User user;
 
-	public int login(User user) {
-		Connection con = DBConnection.connectDB();
-		PreparedStatement preSt =null;
-		ResultSet rs = null;
-		String sql = "select id,username, password from user where username=?";
-		
-		try {
-			preSt = con.prepareStatement(sql);
-			preSt.setString(1, user.getUserName());
-			rs = preSt.executeQuery();
-			while(rs.next()) {
-				if( rs.getString(3).equals(user.getPassword()) ){
-					return rs.getInt(1);
-				}
-			}		
-		}catch(Exception e) {
-			System.out.println(e);
-		}finally {
-			try{
-				rs.close();
-				preSt.close();
-				con.close();
-			}catch(Exception e){}
-		}
-		return -1;
-	}
-	
-	public boolean queryUser(String username) {
-		//²éÑ¯ÓÃ»§ÃûÊÇ·ñ´æÔÚ, ´æÔÚ·µ»Ø true£¬ ²»´æÔÚ·µ»Ø false		
-		
-		Connection con = DBConnection.connectDB();
-		PreparedStatement preSt = null;
-		ResultSet rs = null;
-		String sql = "SELECT username FROM user WHERE username=?";
-		
-		try {
-			preSt = con.prepareStatement(sql);
-			preSt.setString(1, username);
-			rs = preSt.executeQuery();
-			if(rs.next()) {
-				return true;
-			}
-			
-		}catch(Exception e) {
-			
-		}finally {
-			try{
-				rs.close();
-				preSt.close();
-				con.close();
-			}catch(Exception e){}
-		}
-		return false;
-	}
-	
-	public int registration(User user) {
-		Connection con = DBConnection.connectDB();
-		PreparedStatement preSt = null;
-		String sql = "INSERT INTO user (username, password, tel) VALUES(?, ?, ?)";
-		int ok = -1;
-		if(queryUser(user.getUserName())) {
-			return ok;
-		}
-			
-		try {
-			preSt = con.prepareStatement(sql);
-			preSt.setString(1, user.getUserName());
-			preSt.setString(2, user.getPassword());
-			preSt.setString(3, user.getTelephone());
-			ok= preSt.executeUpdate();
-			if(ok != -1)
-				System.out.println("×¢²á³É¹¦");
-			
-			return ok;
-		}catch(Exception e) {
-			System.out.println(e);
-		}finally {
-			try{
-				preSt.close();
-				con.close();
-			}catch(Exception e){}
-		}
-		
-		return ok;
-	}
-	
-	
+    public int login(User user) {
+        Connection con = DBConnection.connectDB();
+        PreparedStatement preSt = null;
+        ResultSet rs = null;
+        String sql = "select id,username, password from user where username=?";
+
+        try {
+            preSt = con.prepareStatement(sql);
+            preSt.setString(1, user.getUserName());
+            rs = preSt.executeQuery();
+            while (rs.next()) {
+                if (rs.getString(3).equals(user.getPassword())) {
+                    return rs.getInt(1);
+                }
+            }
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            try {
+                rs.close();
+                preSt.close();
+                con.close();
+            } catch (Exception e) {
+            }
+        }
+        return -1;
+    }
+
+    public boolean queryUser(String username) {
+        //ï¿½ï¿½Ñ¯ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ trueï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ú·ï¿½ï¿½ï¿½ false
+
+        Connection con = DBConnection.connectDB();
+        PreparedStatement preSt = null;
+        ResultSet rs = null;
+        String sql = "SELECT username FROM user WHERE username=?";
+
+        try {
+            preSt = con.prepareStatement(sql);
+            preSt.setString(1, username);
+            rs = preSt.executeQuery();
+            if (rs.next()) {
+                return true;
+            }
+
+        } catch (Exception e) {
+
+        } finally {
+            try {
+                rs.close();
+                preSt.close();
+                con.close();
+            } catch (Exception e) {
+            }
+        }
+        return false;
+    }
+
+    public int registration(User user) {
+        Connection con = DBConnection.connectDB();
+        PreparedStatement preSt = null;
+        String sql = "INSERT INTO user (username, password, tel) VALUES(?, ?, ?)";
+        int ok = -1;
+        if (queryUser(user.getUserName())) {
+            return ok;
+        }
+
+        try {
+            preSt = con.prepareStatement(sql);
+            preSt.setString(1, user.getUserName());
+            preSt.setString(2, user.getPassword());
+            preSt.setString(3, user.getTelephone());
+            ok = preSt.executeUpdate();
+            if (ok != -1)
+                System.out.println("×¢ï¿½ï¿½É¹ï¿½");
+
+            return ok;
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            try {
+                preSt.close();
+                con.close();
+            } catch (Exception e) {
+            }
+        }
+
+        return ok;
+    }
+
+
 }

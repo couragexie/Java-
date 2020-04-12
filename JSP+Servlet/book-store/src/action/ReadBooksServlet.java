@@ -1,10 +1,10 @@
 package action;
 
 /*
-* ´¦ÀíÇ°¶ËÇëÇóÍ¼ÊéÊý¾ÝµÄÇëÇó
-*
-*
-* */
+ * ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½ï¿½
+ *
+ *
+ * */
 
 import Dao.IOBookDao;
 import Domain.Book;
@@ -20,68 +20,68 @@ import java.util.ArrayList;
 
 
 @WebServlet("/ReadBooksServlet")
-public class ReadBooksServlet extends HttpServlet{
+public class ReadBooksServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doPost(request, response);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         System.out.println("123");
         String url = request.getSession().getServletContext().getRealPath("/static/upload");
         System.out.println(url);
 
 
-        // »ñÈ¡ÇëÇóµÄÍ¼Êé·ÖÀà
+        // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½
         int classifyID = Integer.parseInt(request.getParameter("classifyID"));
 
-        // ÊµÀý»¯ IOBookDao Àà£¬¸ÃÀàÓÃÓÚ´¦Àí¶ÁÈ¡Êý¾Ý¿âÍ¼ÊéµÄÊý¾Ý
+        // Êµï¿½ï¿½ï¿½ï¿½ IOBookDao ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ý¿ï¿½Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         IOBookDao ioBookDao = new IOBookDao();
 
-        // ¶¨ÓÚ Í¼ÊéÀàµÄ list Êý×é£¬ÓÃÓÚ´æ´¢Í¼ÊéÀà£¬
+        // ï¿½ï¿½ï¿½ï¿½ Í¼ï¿½ï¿½ï¿½ï¿½ï¿½ list ï¿½ï¿½ï¿½é£¬ï¿½ï¿½ï¿½Ú´æ´¢Í¼ï¿½ï¿½ï¿½à£¬
         ArrayList<Book> books = new ArrayList<>();
 
-        // »ñÈ¡Êä³ö¶ÔÏó
+        // ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         PrintWriter out = response.getWriter();
 
-        // json ×Ö·û´®£¬ÓÃÓÚÏòÒ³ÃæÊä³öjson£¬
+        // json ï¿½Ö·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½jsonï¿½ï¿½
         StringBuilder json1 = new StringBuilder();
 
-        // ioBookDao ·µ»Ø list Êý×é
+        // ioBookDao ï¿½ï¿½ï¿½ï¿½ list ï¿½ï¿½ï¿½ï¿½
         books = ioBookDao.readBooks(classifyID);
 
-        // ÅÐ¶ÏÊÇ·ñ¶ÁÈ¡³É¹¦Êý¾Ý
-        // ÏÂÃæÊÇÀûÓÃ×Ö·û´®Æ´½Ó³É json Êý¾ÝµÄ¸ñÊ½
-        // ÆäÊµÓÐ¸üºÃµÄ½â¾ö·½·¨£¬ÒýÈëµÚÈý·½jar°ü£¬¶¨ÒåJSON¶ÔÏóÀ´´¦Àí
-        if(books.size() != 0){
+        // ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½È¡ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Æ´ï¿½Ó³ï¿½ json ï¿½ï¿½ï¿½ÝµÄ¸ï¿½Ê½
+        // ï¿½ï¿½Êµï¿½Ð¸ï¿½ï¿½ÃµÄ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½jarï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½JSONï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (books.size() != 0) {
             json1.append("{\"meg\":\"success\", ");
             json1.append("\"data\":{\"books\":[ ");
-            for(Book book: books) {
+            for (Book book : books) {
                 StringBuilder str = new StringBuilder();
-                str.append("{ \"id\": " + "\""+ book.getId() + "\"");
-                str.append(", \"bookName\":" + "\""+ book.getBookName()+ "\"");
+                str.append("{ \"id\": " + "\"" + book.getId() + "\"");
+                str.append(", \"bookName\":" + "\"" + book.getBookName() + "\"");
                 str.append(", \"author\":" + "\"" + book.getAuthor() + "\"");
                 str.append(", \"press\":" + "\"" + book.getPress() + "\"");
-                str.append(", \"intro\":" + "\"" + book.getIntro()+ "\"");
-                str.append(", \"picture\":" + "\"" + book.getPicture()+ "\"");
-                str.append(", \"price\":"+ "\"" + book.getPrice()+ "\"");
+                str.append(", \"intro\":" + "\"" + book.getIntro() + "\"");
+                str.append(", \"picture\":" + "\"" + book.getPicture() + "\"");
+                str.append(", \"price\":" + "\"" + book.getPrice() + "\"");
                 str.append("}#1");
                 System.out.println(str);
                 json1.append(str.toString());
             }
-            // ´¦Àí×Ö·û´®Æ´½ÓÎÊÌâ£¬
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Æ´ï¿½ï¿½ï¿½ï¿½ï¿½â£¬
             int index = json1.lastIndexOf("#");
-            json1.delete(index,json1.length());
+            json1.delete(index, json1.length());
             json1.append(" ] } }");
             String json = json1.toString();
-            json = json.replaceAll("#1",", ");
+            json = json.replaceAll("#1", ", ");
             System.out.println(json);
 
-            // ÏòÇ°¶ËÊä³ö JSON Êý¾Ý
+            // ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ JSON ï¿½ï¿½ï¿½ï¿½
             out.println(json);
 
-        }else{
+        } else {
             out.println("meg:false");
         }
 

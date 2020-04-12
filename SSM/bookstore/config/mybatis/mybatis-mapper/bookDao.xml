@@ -38,7 +38,8 @@
     </select>
 
     <insert id="addBook" parameterType="Book">
-        INSERT INTO book(bookName, author, price, press, classifyID, intro, stock, imgPath) VALUES(#{bookname}, #{author}, #{price}, #{press}, #{classifyID}, #{intro}, #{stock}, #{imgPath})
+        INSERT INTO book(bookName, author, price, press, classifyID, intro, stock, imgPath) VALUES(#{bookname},
+        #{author}, #{price}, #{press}, #{classifyID}, #{intro}, #{stock}, #{imgPath})
     </insert>
 
     <select id="getAllBook" resultType="userResultMap">
@@ -51,7 +52,7 @@
 
     <update id="updateBook" parameterType="Book">
         UPDATE book SET bookName=#{bookName}, author=#{author}, price=#{price}
-               press=#{press}, classifyID=#{classifyID}, intro=#{intro}, stock=#{stock}, imgPath=#{imgPath} WHERE id=#{id}
+        press=#{press}, classifyID=#{classifyID}, intro=#{intro}, stock=#{stock}, imgPath=#{imgPath} WHERE id=#{id}
     </update>
 
     <update id="updateStock">

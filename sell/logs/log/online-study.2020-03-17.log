@@ -1,0 +1,570 @@
+【xkcoding】2020-03-17 15:52:45.226 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - Starting ProductCategoryDaoTest on DESKTOP-VIOE9O3 with PID 14868 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 15:52:45.232 DEBUG [main] c.j.sell.dao.ProductCategoryDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-17 15:52:45.236 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 15:52:45.353 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42039326
+【xkcoding】2020-03-17 15:52:49.690 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 15:52:49.722 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 15:52:49.885 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 15:52:50.186 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 15:52:50.271 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 15:52:50.378 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 15:52:51.153 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 15:52:51.294 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - Started ProductCategoryDaoTest in 7.343 seconds (JVM running for 9.766)
+【xkcoding】2020-03-17 15:52:52.655 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 15:52:52.673 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? , ? ) 
+【xkcoding】2020-03-17 15:52:53.023 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer), 3(Integer)
+【xkcoding】2020-03-17 15:52:53.082 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 2
+【xkcoding】2020-03-17 15:52:53.115 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@42039326, started on Tue Mar 17 15:52:45 CST 2020
+【xkcoding】2020-03-17 15:52:53.123 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 15:52:53.153 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-17 15:56:57.340 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - Starting ProductCategoryDaoTest on DESKTOP-VIOE9O3 with PID 15860 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 15:56:57.343 DEBUG [main] c.j.sell.dao.ProductCategoryDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-17 15:56:57.344 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 15:56:57.485 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@63787180
+【xkcoding】2020-03-17 15:57:01.584 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 15:57:01.615 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 15:57:01.753 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 15:57:01.868 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 15:57:01.897 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 15:57:01.977 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 15:57:02.626 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 15:57:02.751 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - Started ProductCategoryDaoTest in 6.448 seconds (JVM running for 8.653)
+【xkcoding】2020-03-17 15:57:03.717 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 15:57:03.730 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? , ? ) 
+【xkcoding】2020-03-17 15:57:03.992 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer), 3(Integer)
+【xkcoding】2020-03-17 15:57:04.051 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 2
+【xkcoding】2020-03-17 15:57:04.088 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@63787180, started on Tue Mar 17 15:56:57 CST 2020
+【xkcoding】2020-03-17 15:57:04.093 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 15:57:04.117 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-17 16:07:19.366 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - Starting ProductCategoryDaoTest on DESKTOP-VIOE9O3 with PID 12552 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 16:07:19.376 DEBUG [main] c.j.sell.dao.ProductCategoryDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-17 16:07:19.378 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 16:07:19.484 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@42039326
+【xkcoding】2020-03-17 16:07:24.923 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 16:07:24.987 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 16:07:25.206 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 16:07:25.577 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 16:07:25.644 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 16:07:25.975 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 16:07:27.070 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 16:07:27.506 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - Started ProductCategoryDaoTest in 9.33 seconds (JVM running for 11.993)
+【xkcoding】2020-03-17 16:07:28.982 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 16:07:29.002 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? , ? ) 
+【xkcoding】2020-03-17 16:07:29.420 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer), 3(Integer)
+【xkcoding】2020-03-17 16:07:29.486 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 2
+【xkcoding】2020-03-17 16:07:29.527 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@42039326, started on Tue Mar 17 16:07:19 CST 2020
+【xkcoding】2020-03-17 16:07:29.532 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 16:07:29.576 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-17 16:54:10.034 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - Starting ProductCategoryDaoTest on DESKTOP-VIOE9O3 with PID 8256 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 16:54:10.049 DEBUG [main] c.j.sell.dao.ProductCategoryDaoTest - Running with Spring Boot v2.2.5.RELEASE, Spring v5.2.4.RELEASE
+【xkcoding】2020-03-17 16:54:10.050 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 16:54:10.315 DEBUG [main] o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@a87f8ec
+【xkcoding】2020-03-17 16:54:15.725 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 16:54:15.786 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 16:54:16.123 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 16:54:16.248 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 16:54:16.284 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 16:54:16.439 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 16:54:17.214 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 16:54:17.359 INFO  [main] c.j.sell.dao.ProductCategoryDaoTest - Started ProductCategoryDaoTest in 9.499 seconds (JVM running for 12.542)
+【xkcoding】2020-03-17 16:54:19.286 INFO  [main] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 16:54:19.301 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? , ? ) 
+【xkcoding】2020-03-17 16:54:19.739 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer), 3(Integer)
+【xkcoding】2020-03-17 16:54:19.880 DEBUG [main] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 2
+【xkcoding】2020-03-17 16:54:19.957 DEBUG [SpringContextShutdownHook] o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@a87f8ec, started on Tue Mar 17 16:54:10 CST 2020
+【xkcoding】2020-03-17 16:54:19.962 INFO  [SpringContextShutdownHook] o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 16:54:19.993 INFO  [SpringContextShutdownHook] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+【xkcoding】2020-03-17 16:54:32.976 INFO  [main] com.jay.sell.SellApplication - Starting SellApplication on DESKTOP-VIOE9O3 with PID 1756 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 16:54:32.986 INFO  [main] com.jay.sell.SellApplication - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 16:54:35.646 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+【xkcoding】2020-03-17 16:54:35.656 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 16:54:35.657 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2020-03-17 16:54:35.657 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+【xkcoding】2020-03-17 16:54:35.758 INFO  [main] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2020-03-17 16:54:35.758 DEBUG [main] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2020-03-17 16:54:35.759 INFO  [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2614 ms
+【xkcoding】2020-03-17 16:54:36.602 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 16:54:36.612 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 16:54:36.665 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 16:54:36.695 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 16:54:36.706 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 16:54:36.730 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 16:54:36.935 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 16:54:36.983 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 16:54:37.008 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/sell'
+【xkcoding】2020-03-17 16:54:37.011 INFO  [main] com.jay.sell.SellApplication - Started SellApplication in 5.185 seconds (JVM running for 7.0)
+【xkcoding】2020-03-17 16:54:38.449 INFO  [RMI TCP Connection(3)-192.168.153.1] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+【xkcoding】2020-03-17 16:54:38.450 INFO  [RMI TCP Connection(3)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+【xkcoding】2020-03-17 16:54:38.450 DEBUG [RMI TCP Connection(3)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+【xkcoding】2020-03-17 16:54:38.476 DEBUG [RMI TCP Connection(3)-192.168.153.1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+【xkcoding】2020-03-17 16:54:38.478 INFO  [RMI TCP Connection(3)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Completed initialization in 28 ms
+【xkcoding】2020-03-17 16:54:39.010 INFO  [RMI TCP Connection(2)-192.168.153.1] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 16:55:59.099 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+【xkcoding】2020-03-17 16:55:59.110 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+【xkcoding】2020-03-17 16:55:59.161 DEBUG [http-nio-8080-exec-3] c.j.s.d.P.getAllByStatus - ==>  Preparing: SELECT * FROM product_info WHERE status=? 
+【xkcoding】2020-03-17 16:55:59.212 DEBUG [http-nio-8080-exec-3] c.j.s.d.P.getAllByStatus - ==> Parameters: 0(Integer)
+【xkcoding】2020-03-17 16:55:59.254 ERROR [http-nio-8080-exec-3] druid.sql.Statement - {conn-10005, pstmt-20001} execute error. SELECT * FROM product_info WHERE status=?
+java.sql.SQLSyntaxErrorException: Unknown column 'status' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:620)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy110.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy86.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy91.getAllByStatus(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy92.getAllByStatus(Unknown Source)
+	at com.jay.sell.service.imp.ProductInfoServiceImp.getAllUp(ProductInfoServiceImp.java:45)
+	at com.jay.sell.controller.BuyerProductController.list(BuyerProductController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+【xkcoding】2020-03-17 16:55:59.407 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Failed to complete request: org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'status' in 'where clause'
+### The error may exist in com/jay/sell/dao/ProductInfoDao.java (best guess)
+### The error may involve com.jay.sell.dao.ProductInfoDao.getAllByStatus-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM product_info WHERE status=?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'status' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'status' in 'where clause'
+【xkcoding】2020-03-17 16:55:59.425 ERROR [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/sell] threw exception [Request processing failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: 
+### Error querying database.  Cause: java.sql.SQLSyntaxErrorException: Unknown column 'status' in 'where clause'
+### The error may exist in com/jay/sell/dao/ProductInfoDao.java (best guess)
+### The error may involve com.jay.sell.dao.ProductInfoDao.getAllByStatus-Inline
+### The error occurred while setting parameters
+### SQL: SELECT * FROM product_info WHERE status=?
+### Cause: java.sql.SQLSyntaxErrorException: Unknown column 'status' in 'where clause'
+; bad SQL grammar []; nested exception is java.sql.SQLSyntaxErrorException: Unknown column 'status' in 'where clause'] with root cause
+java.sql.SQLSyntaxErrorException: Unknown column 'status' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:953)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.execute(ClientPreparedStatement.java:370)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3409)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.wall.WallFilter.preparedStatement_execute(WallFilter.java:620)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.filter.FilterEventAdapter.preparedStatement_execute(FilterEventAdapter.java:440)
+	at com.alibaba.druid.filter.FilterChainImpl.preparedStatement_execute(FilterChainImpl.java:3407)
+	at com.alibaba.druid.proxy.jdbc.PreparedStatementProxyImpl.execute(PreparedStatementProxyImpl.java:167)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.execute(DruidPooledPreparedStatement.java:498)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.ibatis.logging.jdbc.PreparedStatementLogger.invoke(PreparedStatementLogger.java:59)
+	at com.sun.proxy.$Proxy110.execute(Unknown Source)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:64)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79)
+	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63)
+	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324)
+	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109)
+	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:83)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426)
+	at com.sun.proxy.$Proxy86.selectList(Unknown Source)
+	at org.mybatis.spring.SqlSessionTemplate.selectList(SqlSessionTemplate.java:223)
+	at org.apache.ibatis.binding.MapperMethod.executeForMany(MapperMethod.java:147)
+	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:80)
+	at org.apache.ibatis.binding.MapperProxy$PlainMethodInvoker.invoke(MapperProxy.java:144)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy91.getAllByStatus(Unknown Source)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:344)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:198)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
+	at com.sun.proxy.$Proxy92.getAllByStatus(Unknown Source)
+	at com.jay.sell.service.imp.ProductInfoServiceImp.getAllUp(ProductInfoServiceImp.java:45)
+	at com.jay.sell.controller.BuyerProductController.list(BuyerProductController.java:41)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+【xkcoding】2020-03-17 16:55:59.438 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/sell/error", parameters={}
+【xkcoding】2020-03-17 16:55:59.444 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+【xkcoding】2020-03-17 16:55:59.481 DEBUG [http-nio-8080-exec-3] o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+【xkcoding】2020-03-17 16:55:59.489 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+【xkcoding】2020-03-17 16:57:48.677 INFO  [main] com.jay.sell.SellApplication - Starting SellApplication on DESKTOP-VIOE9O3 with PID 21816 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 16:57:48.686 INFO  [main] com.jay.sell.SellApplication - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 16:57:51.852 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+【xkcoding】2020-03-17 16:57:51.865 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 16:57:51.866 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2020-03-17 16:57:51.867 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+【xkcoding】2020-03-17 16:57:52.000 INFO  [main] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2020-03-17 16:57:52.001 DEBUG [main] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2020-03-17 16:57:52.001 INFO  [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3140 ms
+【xkcoding】2020-03-17 16:57:53.037 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 16:57:53.052 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 16:57:53.114 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 16:57:53.141 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 16:57:53.152 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 16:57:53.179 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 16:57:53.416 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 16:57:53.474 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 16:57:53.499 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/sell'
+【xkcoding】2020-03-17 16:57:53.501 INFO  [main] com.jay.sell.SellApplication - Started SellApplication in 5.794 seconds (JVM running for 7.885)
+【xkcoding】2020-03-17 16:57:54.538 INFO  [RMI TCP Connection(1)-192.168.153.1] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+【xkcoding】2020-03-17 16:57:54.539 INFO  [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+【xkcoding】2020-03-17 16:57:54.539 DEBUG [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+【xkcoding】2020-03-17 16:57:54.550 DEBUG [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+【xkcoding】2020-03-17 16:57:54.550 INFO  [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+【xkcoding】2020-03-17 16:57:54.817 INFO  [RMI TCP Connection(2)-192.168.153.1] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 16:58:10.397 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+【xkcoding】2020-03-17 16:58:10.403 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+【xkcoding】2020-03-17 16:58:10.439 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - ==>  Preparing: SELECT * FROM product_info WHERE product_status=? 
+【xkcoding】2020-03-17 16:58:10.489 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - ==> Parameters: 0(Integer)
+【xkcoding】2020-03-17 16:58:10.501 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - <==      Total: 1
+【xkcoding】2020-03-17 16:58:10.536 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? ) 
+【xkcoding】2020-03-17 16:58:10.539 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer)
+【xkcoding】2020-03-17 16:58:10.541 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 1
+【xkcoding】2020-03-17 16:58:10.566 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+【xkcoding】2020-03-17 16:58:10.566 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResultVO(code=0, message=成功, data=ProductVO(CategoryName=热销, CategoryType=2, productInfoVO=ProductIn (truncated)...]
+【xkcoding】2020-03-17 16:58:10.587 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+【xkcoding】2020-03-17 17:00:24.851 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+【xkcoding】2020-03-17 17:00:24.854 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+【xkcoding】2020-03-17 17:00:24.866 DEBUG [http-nio-8080-exec-3] c.j.s.d.P.getAllByStatus - ==>  Preparing: SELECT * FROM product_info WHERE product_status=? 
+【xkcoding】2020-03-17 17:00:24.867 DEBUG [http-nio-8080-exec-3] c.j.s.d.P.getAllByStatus - ==> Parameters: 0(Integer)
+【xkcoding】2020-03-17 17:00:24.870 DEBUG [http-nio-8080-exec-3] c.j.s.d.P.getAllByStatus - <==      Total: 3
+【xkcoding】2020-03-17 17:00:24.872 DEBUG [http-nio-8080-exec-3] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? , ? , ? ) 
+【xkcoding】2020-03-17 17:00:24.873 DEBUG [http-nio-8080-exec-3] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer), 2(Integer), 3(Integer)
+【xkcoding】2020-03-17 17:00:24.875 DEBUG [http-nio-8080-exec-3] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 2
+【xkcoding】2020-03-17 17:00:24.883 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+【xkcoding】2020-03-17 17:00:24.883 DEBUG [http-nio-8080-exec-3] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResultVO(code=0, message=成功, data=ProductVO(CategoryName=女生专属, CategoryType=3, productInfoVO=Product (truncated)...]
+【xkcoding】2020-03-17 17:00:24.885 DEBUG [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+【xkcoding】2020-03-17 17:06:26.473 INFO  [main] com.jay.sell.SellApplication - Starting SellApplication on DESKTOP-VIOE9O3 with PID 22304 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 17:06:26.486 INFO  [main] com.jay.sell.SellApplication - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 17:06:28.805 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+【xkcoding】2020-03-17 17:06:28.818 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 17:06:28.819 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2020-03-17 17:06:28.819 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+【xkcoding】2020-03-17 17:06:28.944 INFO  [main] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2020-03-17 17:06:28.944 DEBUG [main] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2020-03-17 17:06:28.945 INFO  [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2287 ms
+【xkcoding】2020-03-17 17:06:29.733 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 17:06:29.750 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 17:06:29.817 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 17:06:29.843 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 17:06:29.853 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 17:06:29.881 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 17:06:30.052 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 17:06:30.103 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 17:06:30.126 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/sell'
+【xkcoding】2020-03-17 17:06:30.129 INFO  [main] com.jay.sell.SellApplication - Started SellApplication in 4.666 seconds (JVM running for 6.294)
+【xkcoding】2020-03-17 17:06:30.612 INFO  [RMI TCP Connection(1)-192.168.153.1] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+【xkcoding】2020-03-17 17:06:30.612 INFO  [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+【xkcoding】2020-03-17 17:06:30.613 DEBUG [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+【xkcoding】2020-03-17 17:06:30.623 DEBUG [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+【xkcoding】2020-03-17 17:06:30.624 INFO  [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+【xkcoding】2020-03-17 17:06:32.180 INFO  [RMI TCP Connection(3)-192.168.153.1] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 17:06:57.045 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+【xkcoding】2020-03-17 17:06:57.055 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+【xkcoding】2020-03-17 17:06:57.095 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - ==>  Preparing: SELECT * FROM product_info WHERE product_status=? 
+【xkcoding】2020-03-17 17:06:57.141 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - ==> Parameters: 0(Integer)
+【xkcoding】2020-03-17 17:06:57.156 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - <==      Total: 3
+【xkcoding】2020-03-17 17:06:57.189 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? , ? , ? ) 
+【xkcoding】2020-03-17 17:06:57.190 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer), 2(Integer), 3(Integer)
+【xkcoding】2020-03-17 17:06:57.192 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 2
+【xkcoding】2020-03-17 17:06:57.204 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Failed to complete request: java.util.ConcurrentModificationException
+【xkcoding】2020-03-17 17:06:57.212 ERROR [http-nio-8080-exec-1] o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [/sell] threw exception [Request processing failed; nested exception is java.util.ConcurrentModificationException] with root cause
+java.util.ConcurrentModificationException: null
+	at java.util.ArrayList$Itr.checkForComodification(ArrayList.java:909)
+	at java.util.ArrayList$Itr.next(ArrayList.java:859)
+	at com.jay.sell.controller.BuyerProductController.joinData(BuyerProductController.java:64)
+	at com.jay.sell.controller.BuyerProductController.list(BuyerProductController.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:879)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:793)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at com.alibaba.druid.support.http.WebStatFilter.doFilter(WebStatFilter.java:123)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:367)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1639)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+【xkcoding】2020-03-17 17:06:57.218 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - "ERROR" dispatch for GET "/sell/error", parameters={}
+【xkcoding】2020-03-17 17:06:57.220 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController#errorHtml(HttpServletRequest, HttpServletResponse)
+【xkcoding】2020-03-17 17:06:57.239 DEBUG [http-nio-8080-exec-1] o.s.w.s.v.ContentNegotiatingViewResolver - Selected 'text/html' given [text/html, text/html;q=0.8]
+【xkcoding】2020-03-17 17:06:57.244 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Exiting from "ERROR" dispatch, status 500
+【xkcoding】2020-03-17 17:09:46.379 INFO  [main] com.jay.sell.SellApplication - Starting SellApplication on DESKTOP-VIOE9O3 with PID 14244 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 17:09:46.390 INFO  [main] com.jay.sell.SellApplication - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 17:09:48.845 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+【xkcoding】2020-03-17 17:09:48.858 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 17:09:48.859 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2020-03-17 17:09:48.859 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+【xkcoding】2020-03-17 17:09:48.997 INFO  [main] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2020-03-17 17:09:48.998 DEBUG [main] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2020-03-17 17:09:48.998 INFO  [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2393 ms
+【xkcoding】2020-03-17 17:09:49.859 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 17:09:49.872 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 17:09:49.936 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 17:09:49.970 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 17:09:49.982 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 17:09:50.006 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 17:09:50.209 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 17:09:50.259 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 17:09:50.281 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/sell'
+【xkcoding】2020-03-17 17:09:50.285 INFO  [main] com.jay.sell.SellApplication - Started SellApplication in 4.993 seconds (JVM running for 7.34)
+【xkcoding】2020-03-17 17:09:51.340 INFO  [RMI TCP Connection(1)-192.168.153.1] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+【xkcoding】2020-03-17 17:09:51.341 INFO  [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+【xkcoding】2020-03-17 17:09:51.341 DEBUG [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+【xkcoding】2020-03-17 17:09:51.354 DEBUG [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+【xkcoding】2020-03-17 17:09:51.355 INFO  [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Completed initialization in 14 ms
+【xkcoding】2020-03-17 17:09:51.583 INFO  [RMI TCP Connection(2)-192.168.153.1] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 17:09:58.344 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+【xkcoding】2020-03-17 17:09:58.350 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+【xkcoding】2020-03-17 17:09:58.382 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - ==>  Preparing: SELECT * FROM product_info WHERE product_status=? 
+【xkcoding】2020-03-17 17:09:58.430 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - ==> Parameters: 0(Integer)
+【xkcoding】2020-03-17 17:09:58.444 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - <==      Total: 3
+【xkcoding】2020-03-17 17:09:58.476 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? , ? , ? ) 
+【xkcoding】2020-03-17 17:09:58.477 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer), 2(Integer), 3(Integer)
+【xkcoding】2020-03-17 17:09:58.479 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 2
+【xkcoding】2020-03-17 17:09:58.503 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+【xkcoding】2020-03-17 17:09:58.504 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResultVO(code=0, message=成功, data=[ProductVO(CategoryName=热销, CategoryType=2, productInfoVO=[Product (truncated)...]
+【xkcoding】2020-03-17 17:09:58.531 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 200 OK
+【xkcoding】2020-03-17 17:12:09.444 INFO  [main] com.jay.sell.SellApplication - Starting SellApplication on DESKTOP-VIOE9O3 with PID 6348 (started by xj138 in D:\project\Java\Java项目\sell)
+【xkcoding】2020-03-17 17:12:09.453 INFO  [main] com.jay.sell.SellApplication - No active profile set, falling back to default profiles: default
+【xkcoding】2020-03-17 17:12:11.598 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+【xkcoding】2020-03-17 17:12:11.608 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 17:12:11.608 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+【xkcoding】2020-03-17 17:12:11.609 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.31]
+【xkcoding】2020-03-17 17:12:11.707 INFO  [main] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring embedded WebApplicationContext
+【xkcoding】2020-03-17 17:12:11.708 DEBUG [main] o.s.web.context.ContextLoader - Published root WebApplicationContext as ServletContext attribute with name [org.springframework.web.context.WebApplicationContext.ROOT]
+【xkcoding】2020-03-17 17:12:11.708 INFO  [main] o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 2135 ms
+【xkcoding】2020-03-17 17:12:12.617 INFO  [main] o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+【xkcoding】2020-03-17 17:12:12.630 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 17:12:12.691 DEBUG [main] o.s.w.s.m.m.a.RequestMappingHandlerMapping - 3 mappings in 'requestMappingHandlerMapping'
+【xkcoding】2020-03-17 17:12:12.728 DEBUG [main] o.s.w.s.h.SimpleUrlHandlerMapping - Patterns [/webjars/**, /**] in 'resourceHandlerMapping'
+【xkcoding】2020-03-17 17:12:12.741 DEBUG [main] o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+【xkcoding】2020-03-17 17:12:12.766 WARN  [main] o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+【xkcoding】2020-03-17 17:12:12.954 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 2 endpoint(s) beneath base path '/actuator'
+【xkcoding】2020-03-17 17:12:13.010 INFO  [main] o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+【xkcoding】2020-03-17 17:12:13.036 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path '/sell'
+【xkcoding】2020-03-17 17:12:13.043 INFO  [main] com.jay.sell.SellApplication - Started SellApplication in 4.607 seconds (JVM running for 6.518)
+【xkcoding】2020-03-17 17:12:14.168 INFO  [RMI TCP Connection(1)-192.168.153.1] o.a.c.c.C.[.[localhost].[/sell] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+【xkcoding】2020-03-17 17:12:14.168 INFO  [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+【xkcoding】2020-03-17 17:12:14.169 DEBUG [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Detected StandardServletMultipartResolver
+【xkcoding】2020-03-17 17:12:14.180 DEBUG [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+【xkcoding】2020-03-17 17:12:14.180 INFO  [RMI TCP Connection(1)-192.168.153.1] o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+【xkcoding】2020-03-17 17:12:14.537 INFO  [RMI TCP Connection(2)-192.168.153.1] c.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+【xkcoding】2020-03-17 17:12:54.745 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - GET "/sell/buyer/product/list", parameters={}
+【xkcoding】2020-03-17 17:12:54.752 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped to com.jay.sell.controller.BuyerProductController#list()
+【xkcoding】2020-03-17 17:12:54.790 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - ==>  Preparing: SELECT * FROM product_info WHERE product_status=? 
+【xkcoding】2020-03-17 17:12:54.836 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - ==> Parameters: 0(Integer)
+【xkcoding】2020-03-17 17:12:54.849 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getAllByStatus - <==      Total: 3
+【xkcoding】2020-03-17 17:12:54.881 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - ==>  Preparing: SELECT * FROM product_category WHERE category_type IN ( ? , ? , ? ) 
+【xkcoding】2020-03-17 17:12:54.882 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - ==> Parameters: 2(Integer), 2(Integer), 3(Integer)
+【xkcoding】2020-03-17 17:12:54.886 DEBUG [http-nio-8080-exec-1] c.j.s.d.P.getCategoryByCategoryType - <==      Total: 2
+【xkcoding】2020-03-17 17:12:54.907 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Using 'application/json;q=0.8', given [text/html, application/xhtml+xml, image/webp, image/apng, application/xml;q=0.9, application/signed-exchange;v=b3;q=0.9, */*;q=0.8] and supported [application/json, application/*+json, application/json, application/*+json]
+【xkcoding】2020-03-17 17:12:54.908 DEBUG [http-nio-8080-exec-1] o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor - Writing [ResultVO(code=0, message=成功, data=[ProductVO(CategoryName=热销, CategoryType=2, productInfoVO=[Product (truncated)...]
+【xkcoding】2020-03-17 17:12:54.928 DEBUG [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet - Completed 200 OK

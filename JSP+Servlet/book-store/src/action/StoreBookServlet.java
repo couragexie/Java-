@@ -1,9 +1,9 @@
 package action;
 /*
-* »ñÈ¡ÉÏ´«µÄÊé¼®
-* ÀûÓÃ apche  ÉÏ´«jar°ü
-* ÔÚÏàÓ¦µÄÉÏ´«Ò³ÃæµÄ form  ±íµ¥ÖÐÒªÌí¼Ó enctype="multipart/form-data" Õâ¸öÊôÐÔ
-* */
+ * ï¿½ï¿½È¡ï¿½Ï´ï¿½ï¿½ï¿½ï¿½é¼®
+ * ï¿½ï¿½ï¿½ï¿½ apche  ï¿½Ï´ï¿½jarï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½Ï´ï¿½Ò³ï¿½ï¿½ï¿½ form  ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ enctype="multipart/form-data" ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * */
 
 
 import Dao.IOBookDao;
@@ -28,43 +28,43 @@ import java.util.Map;
 public class StoreBookServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        ///´¦ÀíÖÐÎÄÂÒÂëÎÊÌâ
-        //System.out.println("·ÃÎÊ³É¹¦");
+        ///ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        //System.out.println("ï¿½ï¿½ï¿½Ê³É¹ï¿½");
 //        response.setContentType("text/plain; charset=UTF-8");
 //        request.setCharacterEncoding("UTF-8");
 //        response.setCharacterEncoding("UTF-8");
 
         try {
-            // ´´½¨´ÅÅÌÎÄ¼þ¹¤³§Àà
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             DiskFileItemFactory diskFileItemFactory = new DiskFileItemFactory();
-            // ´´½¨ÎÄ¼þ½âÎöÀà£¬´«Èë¹¤³§Àà
+            // ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ë¹¤ï¿½ï¿½ï¿½ï¿½
             ServletFileUpload servletFileUpload = new ServletFileUpload(diskFileItemFactory);
-            // ½âÎö request ÇëÇó£¬·µ»Ø list ¼¯ºÏ
-            List <FileItem> fileItems = servletFileUpload.parseRequest(request);
+            // ï¿½ï¿½ï¿½ï¿½ request ï¿½ï¿½ï¿½ó£¬·ï¿½ï¿½ï¿½ list ï¿½ï¿½ï¿½ï¿½
+            List<FileItem> fileItems = servletFileUpload.parseRequest(request);
 
             Map<String, String> map = new HashMap<>();
 
             Book book = new Book();
             String url = "";
 
-            for(FileItem fileItem : fileItems){
-                // ÅÐ¶ÏÎÄ¼þÊÇÆÕÍ¨Ïî»¹ÊÇÎÄ¼þÏî
-                if(fileItem.isFormField()){
-                    // ÆÕÍ¨±íµ¥Ïî
-                    // »ñÈ¡±íµ¥ name ºÍ value Öµ
+            for (FileItem fileItem : fileItems) {
+                // ï¿½Ð¶ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½î»¹ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½
+                if (fileItem.isFormField()) {
+                    // ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½
+                    // ï¿½ï¿½È¡ï¿½ï¿½ name ï¿½ï¿½ value Öµ
                     String name = fileItem.getFieldName();
                     String value = fileItem.getString("UTF-8");
 
                     System.out.println(name + "      " + value);
                     map.put(name, value);
-                }else{
-                    // ÎÄ¼þÏî
+                } else {
+                    // ï¿½Ä¼ï¿½ï¿½ï¿½
                     String name = fileItem.getName();
-                    // ÅÐ¶ÏÎÄ¼þ²»Îª¿Õ
-                    if(name != null && !"".equals(name)){
-                        // »ñÈ¡ÎÄ¼þÊäÈëÁ÷
+                    // ï¿½Ð¶ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½Îªï¿½ï¿½
+                    if (name != null && !"".equals(name)) {
+                        // ï¿½ï¿½È¡ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                         InputStream in = fileItem.getInputStream();
-                        // »ñÈ¡ÎÄ¼þÉÏ´«µÄ¾ø¶ÔÂ·¾¶
+                        // ï¿½ï¿½È¡ï¿½Ä¼ï¿½ï¿½Ï´ï¿½ï¿½Ä¾ï¿½ï¿½ï¿½Â·ï¿½ï¿½
                         //String path = request.getSession().getServletContext().getRealPath("/img");
                         //String path = this.getServletContext().getRealPath("/upload");
                         //path = path.substring()
@@ -75,26 +75,26 @@ public class StoreBookServlet extends HttpServlet {
                         String fileName = UploadUtil.getUUIDFileName(name);
 
                         System.out.println(fileName);
-                        url = path + "\\" +  fileName;
+                        url = path + "\\" + fileName;
                         System.out.println(url);
-                        //»ñÈ¡Êä³öÁ÷, Êä³öÁ÷µÄÄ¿µÄÎª url.
+                        //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½Îª url.
                         OutputStream os = new FileOutputStream(url);
-                        // ½«»ñÈ¡ÉÏ´«ÊäÈëÁ÷¶Ô½Ó Êä³öÁ÷
+                        // ï¿½ï¿½ï¿½ï¿½È¡ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½
                         int len = 0;
-                        byte [] b = new byte[1024];
+                        byte[] b = new byte[1024];
 
-                        while((len = in.read(b)) != -1){
+                        while ((len = in.read(b)) != -1) {
                             os.write(b, 0, len);
                         }
 
-                        // ¹Ø±ÕÊäÈë¡¢Êä³öÁ÷
+                        // ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ë¡¢ï¿½ï¿½ï¿½ï¿½ï¿½
                         in.close();
                         os.close();
                     } // close if-else
 
                 }
             }
-            // ÊµÀý»¯ Book Àà
+            // Êµï¿½ï¿½ï¿½ï¿½ Book ï¿½ï¿½
             book.setPicture(url);
             book.setBookName(map.get("bookName"));
             book.setAuthor(map.get("author"));
@@ -104,21 +104,21 @@ public class StoreBookServlet extends HttpServlet {
             book.setIntro(map.get("intro"));
             System.out.println(book);
 
-            // ÊµÀý»¯ IOBookDao ÏòÊý¾Ý¿âÐ´ÈëÊý¾Ý
+            // Êµï¿½ï¿½ï¿½ï¿½ IOBookDao ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
             IOBookDao ioBookDao = new IOBookDao();
-            int ok =ioBookDao.storeBook(book);
-            // ÑéÖ¤ÊÇ·ñÉÏ´«³É¹¦
-            if(ok != -1){
-                request.setAttribute("msg", "ÉÏ´«³É¹¦");
-                System.out.println("ÉÏ´«³É¹¦");
-                request.getRequestDispatcher("backIndex.jsp").forward(request,response);
-            }else{
-                request.setAttribute("msg", "ÉÏ´«Ê§°Ü");
-                System.out.println("ÉÏ´«Ê§°Ü");
-                request.getRequestDispatcher("backIndex.jsp").forward(request,response);
+            int ok = ioBookDao.storeBook(book);
+            // ï¿½ï¿½Ö¤ï¿½Ç·ï¿½ï¿½Ï´ï¿½ï¿½É¹ï¿½
+            if (ok != -1) {
+                request.setAttribute("msg", "ï¿½Ï´ï¿½ï¿½É¹ï¿½");
+                System.out.println("ï¿½Ï´ï¿½ï¿½É¹ï¿½");
+                request.getRequestDispatcher("backIndex.jsp").forward(request, response);
+            } else {
+                request.setAttribute("msg", "ï¿½Ï´ï¿½Ê§ï¿½ï¿½");
+                System.out.println("ï¿½Ï´ï¿½Ê§ï¿½ï¿½");
+                request.getRequestDispatcher("backIndex.jsp").forward(request, response);
             }
 
-        }catch(Exception e){
+        } catch (Exception e) {
             System.out.println(e);
         }
     }
@@ -131,7 +131,6 @@ public class StoreBookServlet extends HttpServlet {
 
 
     }
-
 
 
 }

@@ -20,9 +20,9 @@ public class BookServiceImpTest {
     public void getBooksByLatest() {
         BookService bookService = ioc.getBean(BookService.class);
 
-        Page<Book> page =  bookService.getBooksByLatest(1,3);
+        Page<Book> page = bookService.getBooksByLatest(1, 3);
         List<Book> books = page.getPageData();
-        for(Book book: books){
+        for (Book book : books) {
             System.out.println(book);
             System.out.println(book.getBookPics());
         }

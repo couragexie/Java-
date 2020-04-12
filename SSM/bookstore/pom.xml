@@ -10,9 +10,7 @@
     <packaging>war</packaging>
 
 
-
-
-<!-- 错误1：  Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent! -->
+    <!-- 错误1：  Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent! -->
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <spring-version>4.2.5.RELEASE</spring-version>
@@ -27,7 +25,6 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
-
 
 
         <!-- servlet   -->
@@ -195,8 +192,6 @@
         </dependency>
 
 
-
-
     </dependencies>
 
 
@@ -227,15 +222,15 @@
                   如果项目没有上述 webapp 文件，则需要使用插件来指定 war 资源
                -->
             <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-war-plugin</artifactId>
-            <version>2.2</version>
-            <configuration>
-                <!-- 指定web.xml的路径  -->
-                <webXml>WebContent\WEB-INF\web.xml</webXml>
-                <!-- 指定jsp、js、css的路劲 -->
-                <warSourceDirectory>WebContent</warSourceDirectory>
-            </configuration>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <!-- 指定web.xml的路径  -->
+                    <webXml>WebContent\WEB-INF\web.xml</webXml>
+                    <!-- 指定jsp、js、css的路劲 -->
+                    <warSourceDirectory>WebContent</warSourceDirectory>
+                </configuration>
             </plugin>
 
         </plugins>

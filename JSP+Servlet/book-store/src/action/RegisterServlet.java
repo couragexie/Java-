@@ -1,8 +1,8 @@
 package action;
 
 /*
-* ´¦ÀíÓÃ»§×¢²áµÄÀà
-* */
+ * ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½×¢ï¿½ï¿½ï¿½ï¿½ï¿½
+ * */
 
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -17,37 +17,37 @@ import Domain.User;
 
 @WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doPost(request, response);
-	}
+    private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		User user = new User();
-		UserDao uDao = new UserDao();
-		
-		
-		String tel = request.getParameter("telephone");
-		String username = request.getParameter("username");
-		String password = request.getParameter("password");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        doPost(request, response);
+    }
 
-		user.setUserName(username);
-		user.setPassword(password);
-		user.setTelephone(tel);
-		
-		int ok = uDao.registration(user);
-		if(ok != -1) {
-			request.setAttribute("username", username);
-			request.getRequestDispatcher("login.jsp").forward(request, response);
-			
-		}else {
-			System.out.println("×¢²áÊ§°Ü");
-			request.setAttribute("msg", "×¢²áÊ§°Ü£¬ÓÃ»§ÃûÒÑ×¢²á!");
-			request.getRequestDispatcher("register.jsp").forward(request, response);
-			
-		}
-		
-	}	
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        User user = new User();
+        UserDao uDao = new UserDao();
+
+
+        String tel = request.getParameter("telephone");
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+
+        user.setUserName(username);
+        user.setPassword(password);
+        user.setTelephone(tel);
+
+        int ok = uDao.registration(user);
+        if (ok != -1) {
+            request.setAttribute("username", username);
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+
+        } else {
+            System.out.println("×¢ï¿½ï¿½Ê§ï¿½ï¿½");
+            request.setAttribute("msg", "×¢ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½×¢ï¿½ï¿½!");
+            request.getRequestDispatcher("register.jsp").forward(request, response);
+
+        }
+
+    }
 
 }

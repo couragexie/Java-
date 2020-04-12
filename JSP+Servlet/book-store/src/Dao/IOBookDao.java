@@ -16,17 +16,17 @@ public class IOBookDao {
     private static ResultSet rs;
 
 
-    // ¶ÁÈ¡Êý¾Ý¿âÐÅÏ¢
-    public ArrayList<Book> readBooks(int classifyID){
+    // ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½Ï¢
+    public ArrayList<Book> readBooks(int classifyID) {
         String sql = "SELECT * FROM books where classifyID=?";
         ArrayList<Book> books = new ArrayList<>();
         con = DBConnection.connectDB();
 
-        try{
+        try {
             preSt = con.prepareStatement(sql);
-            preSt.setInt(1,classifyID);
+            preSt.setInt(1, classifyID);
             rs = preSt.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 Book book = new Book();
                 book.setId(rs.getInt(1));
                 book.setClassify(rs.getInt(2));
@@ -37,7 +37,7 @@ public class IOBookDao {
                 book.setIntro(rs.getString(7));
 
                 String picture = rs.getString(8);
-                if(picture != null) {
+                if (picture != null) {
                     int index = picture.lastIndexOf("\\");
                     picture = picture.substring(index + 1);
                 }
@@ -50,7 +50,7 @@ public class IOBookDao {
 
             System.out.println();
 
-        }catch(SQLException e){
+        } catch (SQLException e) {
             System.out.println(e);
         }
 
@@ -58,7 +58,7 @@ public class IOBookDao {
     }
 
 
-    // ÏòÊý¾Ý¿âÐ´ÈëÍ¼ÊéÐÅÏ¢
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½Ð´ï¿½ï¿½Í¼ï¿½ï¿½ï¿½ï¿½Ï¢
     public int storeBook(Book book) {
         con = DBConnection.connectDB();
         String sql = "INSERT INTO books (classifyID, name, price, author, press, intro, picture) values (?, ?, ?, ? ,?, ?, ?)";
@@ -83,10 +83,11 @@ public class IOBookDao {
                 rs.close();
                 preSt.close();
                 con.close();
-            }catch (Exception e) {}
+            } catch (Exception e) {
             }
-            return -1;
         }
+        return -1;
+    }
 
 
 }

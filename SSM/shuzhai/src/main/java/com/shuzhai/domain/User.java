@@ -12,7 +12,7 @@ public class User {
     private String email;
     private Timestamp registerTime;
 
-    public User(){
+    public User() {
 
     }
 

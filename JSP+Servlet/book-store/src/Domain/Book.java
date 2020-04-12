@@ -77,16 +77,16 @@ public class Book {
 
 
     @Override
-    public String toString(){
+    public String toString() {
         StringBuilder str = new StringBuilder();
-        str.append("[  id: "  + id);
-        str.append("    ·ÖÀà£º" + classify);
-        str.append("    ÊéÃû£º" + bookName);
-        str.append("    ×÷Õß£º" + author);
-        str.append("    ³ö°æÉç£º" + press);
-        str.append("    ¼ò½é£º" + intro);
-        str.append("    ÕÕÆ¬£º" + picture);
-        str.append("    ¼Û¸ñ£º" + price);
+        str.append("[  id: " + id);
+        str.append("    ï¿½ï¿½ï¿½à£º" + classify);
+        str.append("    ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + bookName);
+        str.append("    ï¿½ï¿½ï¿½ß£ï¿½" + author);
+        str.append("    ï¿½ï¿½ï¿½ï¿½ï¿½ç£º" + press);
+        str.append("    ï¿½ï¿½é£º" + intro);
+        str.append("    ï¿½ï¿½Æ¬ï¿½ï¿½" + picture);
+        str.append("    ï¿½Û¸ï¿½" + price);
 
         str.append(" ]");
         return str.toString();

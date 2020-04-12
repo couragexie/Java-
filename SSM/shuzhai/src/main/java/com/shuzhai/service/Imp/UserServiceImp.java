@@ -26,7 +26,6 @@ public class UserServiceImp implements UserService {
     UserDao userDao;
 
     /**
-     *
      * @Author: jay
      * @Description: 处理用户注册
      * @Date 2019/10/13 17:05
@@ -36,7 +35,7 @@ public class UserServiceImp implements UserService {
         try {
             userDao.addUser(user);
             saveUserInfo(user);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -44,16 +43,15 @@ public class UserServiceImp implements UserService {
     }
 
     /**
-     *
      * @Author: jay
      * @Description: 用户登录检查
      * @Date 2019/10/13 17:05
      **/
-    public int checkUserByTelAndPassword(User user){
+    public int checkUserByTelAndPassword(User user) {
         int id = -1;
         try {
             id = userDao.checkUser(user);
-        }catch(Exception e) {
+        } catch (Exception e) {
             System.out.println(e);
         }
 
@@ -61,47 +59,45 @@ public class UserServiceImp implements UserService {
     }
 
     // 获取用户信息
-    public UserInfo getUserInfo(int userID){
+    public UserInfo getUserInfo(int userID) {
         UserInfo userInfo = null;
         try {
             userInfo = userDao.getUserInfo(userID);
             userInfo = transformPath(userInfo);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println(userInfo);
-        return  userInfo;
+        return userInfo;
     }
 
 
     /**
-     *
      * @Author: jay
      * @Description: 注册时添加用户默认信息。
      * @Date 2019/10/13 17:03
      **/
-    public void  saveUserInfo(User user) {
-        UserInfo userInfo = new UserInfo(user.getUserID(), user.getTelephone(), new BigDecimal(0),null, 0, 0, 0, 0);
+    public void saveUserInfo(User user) {
+        UserInfo userInfo = new UserInfo(user.getUserID(), user.getTelephone(), new BigDecimal(0), null, 0, 0, 0, 0);
         // 设置默认图片
         userInfo.setProfileImg("/imgs/users/9fb4e049gy1g7wffmsvgnj20rs0tyafn.jpg");
         try {
             userDao.addUserInfo(userInfo);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
 
         }
     }
 
     /**
-     *
      * @Author: jay
      * @Description: 修改用户信息
      * @Date 2019/10/13 17:03
      **/
-    public boolean modifiedUserInfo(UserInfo userInfo){
+    public boolean modifiedUserInfo(UserInfo userInfo) {
         try {
             userDao.updateUserInfo(userInfo);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -109,30 +105,29 @@ public class UserServiceImp implements UserService {
     }
 
     /**
-     *
      * @Author: jay
-     * @Description:  修改密码
+     * @Description: 修改密码
      * @Date 2019/10/13 17:02
      **/
-    public boolean modifiedPassowrd(User user, String newPassword){
+    public boolean modifiedPassowrd(User user, String newPassword) {
         // 从数据库中取出操作对象
         User tUser = null;
         try {
             tUser = userDao.getUser(user.getUserID());
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
 
         // 判断两个对象密码是否相等
-        if(!tUser.getPassword().equals(user.getPassword()))
+        if (!tUser.getPassword().equals(user.getPassword()))
             return false;
 
         // 更新密码
         try {
             user.setPassword(newPassword);
             userDao.updatePassword(user);
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
             return false;
         }
@@ -141,12 +136,11 @@ public class UserServiceImp implements UserService {
     }
 
     /**
-     *
      * @Author: jay
-     * @Description:  处理用户图片上传
+     * @Description: 处理用户图片上传
      * @Date 2019/10/13 17:02
      **/
-    public String uploadPicture(Integer userId, CommonsMultipartFile pictureFile){
+    public String uploadPicture(Integer userId, CommonsMultipartFile pictureFile) {
         // 处理文件上传的路径, 0：代表上传到 imgs/user 文件夹下
         String storePath = HandlePathUtil.handlePicPath(pictureFile.getOriginalFilename(), 0);
 
@@ -155,12 +149,12 @@ public class UserServiceImp implements UserService {
 
         File destFile = new File(storePath);
         System.out.println("文件上传位置：" + destFile.getAbsolutePath());
-        try{
+        try {
             FileUtils.copyInputStreamToFile(pictureFile.getInputStream(), destFile);
             // 更新数据库图片字段的数据
             userDao.updateUserPic(storePath, userId);
             System.out.println("更新成功！！");
-        }catch(IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
 
@@ -171,22 +165,21 @@ public class UserServiceImp implements UserService {
     }
 
     /**
-     *
      * @Author: jay
      * @Description: 处理图片的访问路径
      * @Date 2019/10/13 17:17
      **/
-    public UserInfo transformPath(UserInfo userInfo){
+    public UserInfo transformPath(UserInfo userInfo) {
         String storePath = userInfo.getProfileImg();
         userInfo.setProfileImg(HandlePathUtil.storePathTransformUrl(storePath));
         return userInfo;
     }
 
-    public String transformPath(String storePath){
+    public String transformPath(String storePath) {
         return HandlePathUtil.storePathTransformUrl(storePath);
     }
 
-    public String getPicName(String storePath){
+    public String getPicName(String storePath) {
         return HandlePathUtil.getPicNameFromPath(storePath);
     }
 

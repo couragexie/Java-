@@ -29,41 +29,41 @@ public class BookController {
     @Autowired
     BookServiceImp bookService;
 
-    /** Log4j日志处理(@author: rico) */
+    /**
+     * Log4j日志处理(@author: rico)
+     */
     private static final Logger log = Logger.getLogger(BookController.class);
 
     /**
-     *
      * @Author: jay
      * @Description: 获取用户发布的书籍
      * @Date 2019/10/17 9:26
      **/
     @RequestMapping(value = "publishedBooks", method = RequestMethod.GET)
-    public Response getPubBook(Integer userId){
+    public Response getPubBook(Integer userId) {
         List<Book> books = bookService.getPublishedBooksByUserId(userId);
-        if(books == null)
+        if (books == null)
             return new Response().failure("尚未发布书籍");
         return new Response().success(books);
     }
 
 
     /**
-     *
      * @Author: jay
-     * @Description:  发布书籍
+     * @Description: 发布书籍
      * @Date 2019/10/18 22:09
      **/
     @RequestMapping(method = RequestMethod.POST)
     public Response uploadBookPics(Book book, MultipartRequest request,
-                                    @RequestParam Double price){
+                                   @RequestParam Double price) {
         List<MultipartFile> pics = new ArrayList<>();
         log.info("获取数据111：" + book + " 价格：" + price);
         // 设置图书金额
-        if(price != null)
+        if (price != null)
             book.setPrice(new BigDecimal(price));
 
 
-        StringBuilder stringBuilder  = new StringBuilder();
+        StringBuilder stringBuilder = new StringBuilder();
 
         // 获取文件变量名
         Iterator<String> picsName = request.getFileNames();
@@ -77,7 +77,7 @@ public class BookController {
 
         boolean ok = bookService.addBook(book, pics);
 
-        if(!ok)
+        if (!ok)
             return new Response().failure();
         return new Response().success();
 
@@ -90,26 +90,26 @@ public class BookController {
      * @Date 2019/10/20 14:59
      **/
     @RequestMapping(value = "categoryInfo", method = RequestMethod.GET)
-    public Response getBooksByCategory(){
+    public Response getBooksByCategory() {
         List<Category> categories = bookService.getCategoryInfo();
         return new Response().success(categories);
     }
 
 
     @RequestMapping(value = "latestBook", method = RequestMethod.GET)
-    public Response getBooksByLast(Integer pageNo, Integer pageSize){
+    public Response getBooksByLast(Integer pageNo, Integer pageSize) {
         log.info("pageNo：" + pageNo + " pageSize：" + pageSize);
         Page<Book> page = bookService.getBooksByLatest(pageNo, pageSize);
-        if (page == null )
+        if (page == null)
             return new Response().failure();
         return new Response().success(page);
     }
 
-    @RequestMapping(value = "classifiedBook" , method = RequestMethod.GET)
-    public Response getBooksByCategory(Integer category, Integer pageNo, Integer pageSize){
-        log.info("category:"+ category + " pageNo：" + pageNo + " pageSize：" + pageSize);
+    @RequestMapping(value = "classifiedBook", method = RequestMethod.GET)
+    public Response getBooksByCategory(Integer category, Integer pageNo, Integer pageSize) {
+        log.info("category:" + category + " pageNo：" + pageNo + " pageSize：" + pageSize);
         Page<Book> page = bookService.getBooksByCategory(category, pageNo, pageSize);
-        if(page == null)
+        if (page == null)
             return new Response().failure();
         return new Response().success(page);
     }

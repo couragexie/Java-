@@ -5,16 +5,16 @@
   Time: 17:09
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jstl/core_rt" %>
 <!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <!-- Bootstrap CSS -->
     <link href="bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/backIndex.css" rel="stylesheet">
@@ -26,16 +26,15 @@
 <script src="js/backIndex.js"></script>
 
 
-
 <%
-    String username = (String)session.getAttribute("adUsername");
+    String username = (String) session.getAttribute("adUsername");
 
-    if(username == null){
+    if (username == null) {
 %>
-    <script>
-        alert("你还没有登录，请先登录");
-        <%response.sendRedirect("backLogin.jsp");%>
-    </script>
+<script>
+    alert("你还没有登录，请先登录");
+    <%response.sendRedirect("backLogin.jsp");%>
+</script>
 
 <%
 
@@ -44,13 +43,13 @@
 %>
 
 <%
-    String msg = (String)request.getAttribute("msg");
-    if(msg != null){
+    String msg = (String) request.getAttribute("msg");
+    if (msg != null) {
 
 %>
-    <script>
-        alert("<%=msg%>")
-    </script>
+<script>
+    alert("<%=msg%>")
+</script>
 <%
     }
 %>
@@ -98,7 +97,8 @@
         <div class="headline"><p>添加图书</p></div>
         <hr>
         <div class="content">
-            <form class="form-inline" method="post" action="${pageContext.request.contextPath}/StoreBookServlet" enctype="multipart/form-data">
+            <form class="form-inline" method="post" action="${pageContext.request.contextPath}/StoreBookServlet"
+                  enctype="multipart/form-data">
                 <!-- 图片上传 -->
                 <div class="showImg">
                     <a class=" thumbnail book_img" href="#">
@@ -118,19 +118,22 @@
                 <!-- 书籍添加信息处 -->
                 <div class="info">
                     <div class="form-group">
-                        <label class='exampleInputName2' >书名&nbsp;：</label>
+                        <label class='exampleInputName2'>书名&nbsp;：</label>
                         <input type="text" class="form-control input" name="bookName" placeholder="请输入书名">
-                    </div><br>
+                    </div>
+                    <br>
                     <div class="form-group">
-                        <label class='exampleInputName2' >价格&nbsp;：</label>
+                        <label class='exampleInputName2'>价格&nbsp;：</label>
                         <input type="text" class="form-control input" name="price" placeholder="请输入书名">
-                    </div><br>
+                    </div>
+                    <br>
                     <div class="form-group">
-                        <label class='exampleInputName2' >作者&nbsp;：</label>
+                        <label class='exampleInputName2'>作者&nbsp;：</label>
                         <input type="text" class="form-control input" name="author" placeholder="请输入作者">
-                    </div><br>
+                    </div>
+                    <br>
                     <div class="form-group">
-                        <label class='exampleInputName2' >出版社:</label>
+                        <label class='exampleInputName2'>出版社:</label>
                         <input type="text" class="form-control input" name="press" placeholder="请输入出版社">
                     </div>
 
@@ -149,7 +152,7 @@
                     <option value="9">电子书</option>
                 </select>
                 <div>
-                    <textarea class="intro form-control "  name="intro" placeholder="请输入书籍简介"></textarea>
+                    <textarea class="intro form-control " name="intro" placeholder="请输入书籍简介"></textarea>
                 </div>
                 <button type="submit" id="submit" class="btn btn-primary">提交</button>
             </form>
@@ -161,9 +164,6 @@
 </div>
 
 <div class="footer"></div>
-
-
-
 
 
 </body>

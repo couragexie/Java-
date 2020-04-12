@@ -10,16 +10,16 @@ import com.bookstore.domain.Book;
 
 @Service
 public class BookService {
-	@Autowired
-	private BookDao bookDao;
-	
-	public List<Book> getBooks(Integer classifyID){
-		return bookDao.getAllBook(classifyID);	
-	}
-	
-	public int addBook(Book book) {
-		return bookDao.addBook(book);
-	}
-	
-	
+    @Autowired
+    private BookDao bookDao;
+
+    public List<Book> getBooks(Integer classifyID) {
+        return bookDao.getAllBook(classifyID);
+    }
+
+    public int addBook(Book book) {
+        return bookDao.addBook(book);
+    }
+
+
 }

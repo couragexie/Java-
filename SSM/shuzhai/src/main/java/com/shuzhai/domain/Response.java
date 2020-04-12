@@ -3,17 +3,15 @@ package com.shuzhai.domain;
 
 /**
  * {
- *     "meta":{
- *         "success":"true/false",
- *         "message":"ok/error/自定义错误信息",
- *     },
- *     "data":{
- *         ....
- *     }
+ * "meta":{
+ * "success":"true/false",
+ * "message":"ok/error/自定义错误信息",
+ * },
+ * "data":{
+ * ....
  * }
- *
- *
- * */
+ * }
+ */
 
 
 import javafx.scene.paint.Material;
@@ -33,23 +31,23 @@ public class Response {
     private Meta meta;
     private Object data;
 
-    public Response success(){
+    public Response success() {
         this.meta = new Meta(true, OK);
         return this;
     }
 
-    public Response success(Object data){
+    public Response success(Object data) {
         this.meta = new Meta(true, OK);
         this.data = data;
         return this;
     }
 
-    public Response failure(){
+    public Response failure() {
         this.meta = new Meta(false, ERROR);
         return this;
     }
 
-    public Response failure(String message){
+    public Response failure(String message) {
         this.meta = new Meta(false, message);
         return this;
     }
@@ -71,22 +69,22 @@ public class Response {
     }
 
     /*
-    *  @description: 内部类
-    * */
-    public class Meta{
+     *  @description: 内部类
+     * */
+    public class Meta {
         private boolean success;
         private String message;
 
-        Meta(boolean success, String message){
+        Meta(boolean success, String message) {
             this.success = success;
             this.message = message;
         }
 
-        Meta(boolean success){
-            this.success =  success;
+        Meta(boolean success) {
+            this.success = success;
         }
 
-        public boolean isSuccess(){
+        public boolean isSuccess() {
             return success;
         }
 

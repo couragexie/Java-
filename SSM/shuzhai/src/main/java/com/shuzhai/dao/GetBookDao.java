@@ -14,8 +14,9 @@ public interface GetBookDao {
 
     // 根据图书分类获取图书
     public List<Book> getBooksByCategory(@Param("index") int index,
-                                         @Param("pageSize")int pageSize,
-                                         @Param("category")int category);
+                                         @Param("pageSize") int pageSize,
+                                         @Param("category") int category);
+
     // 获取全部图书
     public List<Book> getAllBooks();
 
@@ -23,7 +24,7 @@ public interface GetBookDao {
     public int getBooksCount();
 
     // 获取某一分类图书数量
-    public  int getBooksCountByCategory(int category);
+    public int getBooksCountByCategory(int category);
 
 
 }

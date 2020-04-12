@@ -1,8 +1,9 @@
 
 package com.bookstore.domain;
+
 import java.io.Serializable;
 
-public class Book  {
+public class Book {
     private Integer id;
     private String bookName;
     private String author;
@@ -15,14 +16,15 @@ public class Book  {
     private String imgName;
 
     public String getImgName() {
-		return imgName;
-	}
+        return imgName;
+    }
 
-	public void setImgName(String imgName) {
-		this.imgName = imgName;
-	}
+    public void setImgName(String imgName) {
+        this.imgName = imgName;
+    }
 
-	public Book(){}
+    public Book() {
+    }
 
     public Book(String bookName, String author, Double price, String press, Integer classifyID, String intro, Integer stock, String imgPath) {
         this.id = id;
